@@ -1,2 +1,2 @@
-# Deabeating
+# Diabeating
 Hanze Experience
