@@ -6,8 +6,11 @@ public class GoalHandler : MonoBehaviour
 {
 
     private string[] goal;
-    public string jsonFile;
+    private Goal goalO;
+    //private var jsonTextFile;
+    //Load text from a JSON file (Assets/Resources/Text/jsonFile01.json)
 
+    //Then use JsonUtility.FromJson<T>() to deserialize jsonTextFile into an object
 
 
     // Given JSON input:
@@ -18,10 +21,15 @@ public class GoalHandler : MonoBehaviour
     void Start()
     {
         goal = new string[10];
+        var jsonTextFile = Resources.Load<TextAsset>("Goals");
+        Debug.Log(jsonTextFile.ToString());
+        goalO = CreateFromJSON(jsonTextFile.ToString());
+        Debug.Log(goalO.goal);
+
     }
 
-    public GoalHandler CreateFromJSON()
+    public static Goal CreateFromJSON(string jsonString)
     {
-        return JsonUtility.FromJson<GoalHandler>(jsonFile);
+        return JsonUtility.FromJson<Goal>(jsonString);
     }
 }

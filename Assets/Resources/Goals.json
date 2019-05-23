@@ -1,6 +1,1 @@
-{
-	"Goals":[
-		"First Test Goal.",
-		"Second Test Goal."
-	]
-}
+{"goal":"First Test Goal.", "goal2":"Second Test Goal."}
