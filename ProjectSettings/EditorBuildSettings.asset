@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menus/MainMenu.unity
+    guid: e7c3687477ae914438197863d72096c2
+  - enabled: 1
     path: Assets/Scenes/Village.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -15,9 +18,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Dialogue1.unity
     guid: 4d8d33cdbb0c66f4ab5c3dab02b95dac
   - enabled: 1
-    path: Assets/Scenes/Hospital.unity
+    path: Assets/Scenes/Buildings/Hospital.unity
     guid: dd3281230bfb88344bb69064d2eeb642
   - enabled: 1
-    path: Assets/Scenes/Market.unity
+    path: Assets/Scenes/Buildings/Market.unity
     guid: 3b4d145b6bffaa94eb73d236d6c59d0e
+  - enabled: 1
+    path: Assets/Scenes/Menus/Credits.unity
+    guid: f6f0a08a4aadbfc41843b499c8915726
+  - enabled: 1
+    path: Assets/Scenes/Menus/Settings.unity
+    guid: 59c08184ec85e79458b10554e319fd51
+  - enabled: 1
+    path: Assets/Scenes/Buildings/Home.unity
+    guid: 2bd73c34de1ecac4182ef39700d0fae9
   m_configObjects: {}
