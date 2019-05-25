@@ -1,15 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Ink.Runtime;
 using UnityEngine.SceneManagement;
 
 
 
 public class Click_handler : MonoBehaviour
 {
-    public GameObject Clickable
-        ;
+    public GameObject Clickable;
     //public GameObject dialogue;
 
     private Vector3 pos = new Vector3(0, 0, 0);
@@ -31,6 +29,6 @@ public class Click_handler : MonoBehaviour
     }
 
 
-
+    
 
 }

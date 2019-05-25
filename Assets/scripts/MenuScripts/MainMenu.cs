@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Village");
+        SceneManager.LoadScene("CharacterCreation");
     }
 
     public void Settings()

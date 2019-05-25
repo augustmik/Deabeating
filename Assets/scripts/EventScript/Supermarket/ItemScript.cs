@@ -117,7 +117,7 @@ public class ItemScript : MonoBehaviour
             inCart = false;
             cart.Remove(item);
             item.transform.SetPositionAndRotation(orgPos, quat);
-            Debug.Log(returnS);
+            
         }
     }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class CartScript : MonoBehaviour
@@ -14,12 +15,17 @@ public class CartScript : MonoBehaviour
     //public Image returnsI;
     public Image sugarLevel;
     public List<GameObject> foods = new List<GameObject>();
+    public Button back;
     public Text sugar;
     public Text Mom;
     public Text returnText;
     public Text cartText;
+    public GameObject arrow;
 
     public int cartSize = 4;
+
+    Vector3 arrowPos;
+    Quaternion quat;
 
     private bool onetime1 = false;
     private bool onetime2 = false;
@@ -35,7 +41,10 @@ public class CartScript : MonoBehaviour
 
     private void Start()
     {
+        arrowPos = arrow.transform.position;
+        quat = arrow.transform.rotation;
 
+        back.interactable = false;
         sugarLevel.fillAmount = 0;
 
     }
@@ -64,13 +73,18 @@ public class CartScript : MonoBehaviour
         {
             sugarlevel += bananaS.sugar/20;
             sugarLevel.fillAmount += sugarlevel;
+            arrowPos.x = arrowPos.x + 20;
             onetime1 = true;
             onetime9 = false;
-        }else if(!foods.Contains(banana) && onetime1 && returns <= 3)
+            arrow.transform.SetPositionAndRotation(arrowPos, quat);
+        }
+        else if(!foods.Contains(banana) && onetime1 && returns <= 3)
         {
             returns++;
             sugarlevel -= bananaS.sugar / 20;
             sugarLevel.fillAmount -= bananaS.sugar / 20;
+            arrowPos.x = arrowPos.x - 20;
+            arrow.transform.SetPositionAndRotation(arrowPos, quat);
             onetime1 = false;}
 
         if (foods.Contains(coke) && !onetime2)
@@ -183,6 +197,11 @@ public class CartScript : MonoBehaviour
         if(foods.Count == cartSize)
         {
            cartText.text = "Your cart is full";
+            if(returns == 3)
+            {
+                back.interactable = true;
+                returnText.text = "Go home to give items to mommy";
+            }
         }else if (foods.Count !=cartSize)
         {
             cartText.text = "";
@@ -195,6 +214,10 @@ public class CartScript : MonoBehaviour
 
     }
 
+    public void BacktoVillage()
+    {
+        SceneManager.LoadScene("Village");
+    }
   
 
 }
