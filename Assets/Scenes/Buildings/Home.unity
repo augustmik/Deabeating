@@ -554,6 +554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playername: {fileID: 523585351}
   thanks: {fileID: 473220160}
+  villageHealth: {fileID: 0}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -581,7 +582,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 400
+  orthographic size: 401.0791
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -726,6 +727,7 @@ MonoBehaviour:
   hTimes: 0
   sTimes: 0
   marketEventCompleted: 0
+  motherHelped: 0
 --- !u!4 &1008101671
 Transform:
   m_ObjectHideFlags: 0
@@ -822,6 +824,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 111
       objectReference: {fileID: 0}
+    - target: {fileID: -3471926617046923872, guid: d8ee677e1a3340642b2d3a1fd1304504,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152039301920048742, guid: d8ee677e1a3340642b2d3a1fd1304504,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2152039301920048743, guid: d8ee677e1a3340642b2d3a1fd1304504,
         type: 3}
       propertyPath: m_Sprite
@@ -837,16 +849,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FlipY
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -3471926617046923872, guid: d8ee677e1a3340642b2d3a1fd1304504,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152039301920048742, guid: d8ee677e1a3340642b2d3a1fd1304504,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2152039301920048742, guid: d8ee677e1a3340642b2d3a1fd1304504, type: 3}
@@ -909,9 +911,9 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
