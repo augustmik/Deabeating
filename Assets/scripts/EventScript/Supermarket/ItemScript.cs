@@ -35,7 +35,7 @@ public class ItemScript : MonoBehaviour
 
     private void Update()
     {
-        if(GameManager.Instance.mTimes == 1)
+        if(GameManager.Instance.marketEventCompleted == false)
         {
 
             CartScript cscript = item.transform.parent.GetComponent<CartScript>();

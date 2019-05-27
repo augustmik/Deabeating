@@ -37,6 +37,11 @@ public class PlayerManager : MonoBehaviour
         {
             GameManager.Instance.hTimes++;
             playername.text = "Welcome home " + playernamestr;
+
+            if(GameManager.Instance.hTimes < 2)
+            {
+                thanks.text = "Good morning " + playernamestr + " I don't feel too good \n could you get me something to eat?";
+            }
             if(GameManager.Instance.marketEventCompleted == true)
             {
                 GameManager.Instance.motherHelped = true;
@@ -56,6 +61,7 @@ public class PlayerManager : MonoBehaviour
             {
                 villageHealth.fillAmount += 0.25f;
             }
+
         }
     }
 

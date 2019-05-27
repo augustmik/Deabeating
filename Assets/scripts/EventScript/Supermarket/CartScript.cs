@@ -51,7 +51,7 @@ public class CartScript : MonoBehaviour
     private void Update()
     {
 
-        if(GameManager.Instance.mTimes == 1)
+        if(GameManager.Instance.marketEventCompleted == false)
         {
 
         GameObject banana = GameObject.Find("Banana");
@@ -248,7 +248,7 @@ public class CartScript : MonoBehaviour
      
         sugar.text = "Sugarlevel: " + sugarlevel.ToString();
         }
-        else if (GameManager.Instance.mTimes != 1)
+        else if (GameManager.Instance.mTimes != 1 && GameManager.Instance.marketEventCompleted == true)
         {
             returnText.text = "YOU HAVE NO BUSINESS HERES";
         }

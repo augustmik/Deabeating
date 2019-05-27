@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public int hTimes = 0;
     public int sTimes = 0;
 
+
     public bool marketEventCompleted = false;
     public bool motherHelped = false;
 

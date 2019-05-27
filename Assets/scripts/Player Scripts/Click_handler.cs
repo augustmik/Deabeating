@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Click_handler : MonoBehaviour
@@ -12,6 +13,7 @@ public class Click_handler : MonoBehaviour
     private Quaternion quat;
 
     public string levelName;
+    public Text NoAccess;
 
     
 
@@ -23,6 +25,10 @@ public class Click_handler : MonoBehaviour
         {
             if(levelName != SceneManager.GetActiveScene().name)
             {
+                if(levelName == "Home" && GameManager.Instance.marketEventCompleted == false)
+                {
+                    NoAccess.text = "You have to go to the market first";
+                }
              SceneManager.LoadScene(levelName);
               
             }
