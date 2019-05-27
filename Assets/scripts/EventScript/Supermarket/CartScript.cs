@@ -250,7 +250,7 @@ public class CartScript : MonoBehaviour
         }
         else if (GameManager.Instance.mTimes != 1)
         {
-            sugar.text = "YOU HAVE NO BUSINESS HERES";
+            returnText.text = "YOU HAVE NO BUSINESS HERES";
         }
 
     }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,13 +13,14 @@ public class GameManager : MonoBehaviour
     public int hTimes = 0;
     public int sTimes = 0;
 
-    public bool marketEventCompleted;
-    
+    public bool marketEventCompleted = false;
+    public bool motherHelped = false;
 
 
 
     private void Awake()
     {
+       
         if (Instance == null)
         {
             Instance = this;

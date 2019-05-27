@@ -25,10 +25,12 @@ public class PlayerManager : MonoBehaviour
 
     public Text playername;
     public Text thanks;
+    public Image villageHealth;
 
 
     private void Start()
     {
+        
         Scene current = SceneManager.GetActiveScene();
      
         if (current.name.ToString() == "Home")
@@ -37,15 +39,23 @@ public class PlayerManager : MonoBehaviour
             playername.text = "Welcome home " + playernamestr;
             if(GameManager.Instance.marketEventCompleted == true)
             {
+                GameManager.Instance.motherHelped = true;
                 thanks.text = "Thank you " + playernamestr + " for bringing me food \n I feel better already!";
             }
         }
 
         if (current.name.ToString() == "Market")
         {
-            
             GameManager.Instance.mTimes++;
-            Debug.Log(GameManager.Instance.mTimes);
+        }
+
+        if(current.name.ToString()== "Village")
+        {
+          
+            if (GameManager.Instance.motherHelped == true)
+            {
+                villageHealth.fillAmount += 0.25f;
+            }
         }
     }
 
