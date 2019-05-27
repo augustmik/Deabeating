@@ -15,7 +15,6 @@ public class CartScript : MonoBehaviour
     //public Image returnsI;
     public Image sugarLevel;
     public List<GameObject> foods = new List<GameObject>();
-    public Button back;
     public Text sugar;
     public Text Mom;
     public Text returnText;
@@ -26,6 +25,7 @@ public class CartScript : MonoBehaviour
 
     Vector3 arrowPos;
     Quaternion quat;
+
 
     private bool onetime1 = false;
     private bool onetime2 = false;
@@ -39,18 +39,21 @@ public class CartScript : MonoBehaviour
 
     private bool removed = false;
 
+
     private void Start()
     {
         arrowPos = arrow.transform.position;
         quat = arrow.transform.rotation;
-
-        back.interactable = false;
         sugarLevel.fillAmount = 0;
 
     }
 
     private void Update()
     {
+
+        if(GameManager.Instance.mTimes == 1)
+        {
+
         GameObject banana = GameObject.Find("Banana");
         GameObject coke = GameObject.Find("Coke");
         GameObject chips = GameObject.Find("Chips");
@@ -73,7 +76,7 @@ public class CartScript : MonoBehaviour
         {
             sugarlevel += bananaS.sugar/20;
             sugarLevel.fillAmount += sugarlevel;
-            arrowPos.x = arrowPos.x + 20;
+            arrowPos.x = arrowPos.x + bananaS.sugar*5;
             onetime1 = true;
             onetime9 = false;
             arrow.transform.SetPositionAndRotation(arrowPos, quat);
@@ -83,7 +86,7 @@ public class CartScript : MonoBehaviour
             returns++;
             sugarlevel -= bananaS.sugar / 20;
             sugarLevel.fillAmount -= bananaS.sugar / 20;
-            arrowPos.x = arrowPos.x - 20;
+            arrowPos.x = arrowPos.x - bananaS.sugar * 5;
             arrow.transform.SetPositionAndRotation(arrowPos, quat);
             onetime1 = false;}
 
@@ -91,91 +94,126 @@ public class CartScript : MonoBehaviour
         {
             sugarlevel += cokeS.sugar / 20;
             sugarLevel.fillAmount += sugarlevel;
+            arrowPos.x = arrowPos.x + cokeS.sugar * 9;
             onetime2 = true;
             onetime9 = false;
-        }else if (!foods.Contains(coke) && onetime2 && returns <= 3)
+            arrow.transform.SetPositionAndRotation(arrowPos, quat);
+        }
+        else if (!foods.Contains(coke) && onetime2 && returns <= 3)
         {
             returns++;
             sugarlevel -= cokeS.sugar / 20;
             sugarLevel.fillAmount -= cokeS.sugar / 20;
+            arrowPos.x = arrowPos.x - cokeS.sugar * 9;
+            arrow.transform.SetPositionAndRotation(arrowPos, quat);
             onetime2 = false;}
 
         if (foods.Contains(chips) && !onetime3)
         {
             sugarlevel += chipsS.sugar / 20;
             sugarLevel.fillAmount += sugarlevel;
+            arrowPos.x = arrowPos.x + chipsS.sugar * 4;
             onetime3 = true;
             onetime9 = false;
-        }else if (!foods.Contains(chips) && onetime3 && returns <= 3)
+            arrow.transform.SetPositionAndRotation(arrowPos, quat);
+        }
+        else if (!foods.Contains(chips) && onetime3 && returns <= 3)
         {
             returns++;
             sugarlevel -= chipsS.sugar / 20;
             sugarLevel.fillAmount -= chipsS.sugar / 20;
+            arrowPos.x = arrowPos.x - chipsS.sugar * 4;
+            arrow.transform.SetPositionAndRotation(arrowPos, quat);
             onetime3 = false;}
 
         if (foods.Contains(orange) && !onetime4)
         {
             sugarlevel += orangeS.sugar / 20;
             sugarLevel.fillAmount += sugarlevel;
+            arrowPos.x = arrowPos.x + orangeS.sugar * 7;
             onetime4 = true;
             onetime9 = false;
-        }else if (!foods.Contains(orange) && onetime4 && returns <= 3)
+            arrow.transform.SetPositionAndRotation(arrowPos, quat);
+        }
+        else if (!foods.Contains(orange) && onetime4 && returns <= 3)
         {
             returns++;
             sugarlevel -= orangeS.sugar / 20;
             sugarLevel.fillAmount -= orangeS.sugar / 20;
+            arrowPos.x = arrowPos.x - orangeS.sugar * 7;
+            arrow.transform.SetPositionAndRotation(arrowPos, quat);
             onetime4 = false;}
 
         if (foods.Contains(apple) && !onetime5)
         {
             sugarlevel += appleS.sugar / 20;
             sugarLevel.fillAmount += sugarlevel;
+            arrowPos.x = arrowPos.x + appleS.sugar * 5;
             onetime5 = true;
             onetime9 = false;
-        }else if (!foods.Contains(apple) && onetime5 && returns <= 3)
+            arrow.transform.SetPositionAndRotation(arrowPos, quat);
+        }
+        else if (!foods.Contains(apple) && onetime5 && returns <= 3)
         {
             returns++;
             sugarlevel -= appleS.sugar / 20;
             sugarLevel.fillAmount -= appleS.sugar / 20;
+            arrowPos.x = arrowPos.x - appleS.sugar * 5;
+            arrow.transform.SetPositionAndRotation(arrowPos, quat);
             onetime5 = false;}
 
         if (foods.Contains(water) && !onetime6)
         {
             sugarlevel += waterS.sugar / 20;
             sugarLevel.fillAmount += sugarlevel;
+            arrowPos.x = arrowPos.x + waterS.sugar * 5;
             onetime6 = true;
             onetime9 = false;
-        }else if (!foods.Contains(water) && onetime6 && returns <= 3)
+            arrow.transform.SetPositionAndRotation(arrowPos, quat);
+        }
+        else if (!foods.Contains(water) && onetime6 && returns <= 3)
         {
             returns++;
             sugarlevel -= waterS.sugar / 20;
             sugarLevel.fillAmount -= waterS.sugar / 20;
+            arrowPos.x = arrowPos.x - waterS.sugar * 5;
+            arrow.transform.SetPositionAndRotation(arrowPos, quat);
             onetime6 = false;}
 
         if (foods.Contains(beer) && !onetime7)
         {
             sugarlevel += beerS.sugar / 20;
             sugarLevel.fillAmount += sugarlevel;
+            arrowPos.x = arrowPos.x + beerS.sugar * 5;
             onetime7 = true;
             onetime9 = false;
-        }else if (!foods.Contains(beer) && onetime7 && returns <= 3)
+            arrow.transform.SetPositionAndRotation(arrowPos, quat);
+        }
+        else if (!foods.Contains(beer) && onetime7 && returns <= 3)
         {
             returns++;
             sugarlevel -= beerS.sugar / 20;
             sugarLevel.fillAmount -= beerS.sugar / 20;
+            arrowPos.x = arrowPos.x - beerS.sugar * 5;
+            arrow.transform.SetPositionAndRotation(arrowPos, quat);
             onetime7 = false;}
 
         if (foods.Contains(honey) && !onetime8)
         {
             sugarlevel += honeyS.sugar / 20;
             sugarLevel.fillAmount += sugarlevel;
+            arrowPos.x = arrowPos.x + honeyS.sugar * 10;
             onetime8 = true;
             onetime9 = false;
-        }else if (!foods.Contains(honey) && onetime8 && returns <= 3)
+            arrow.transform.SetPositionAndRotation(arrowPos, quat);
+        }
+        else if (!foods.Contains(honey) && onetime8 && returns <= 3)
         {
             returns++;
             sugarlevel -= honeyS.sugar / 20;
             sugarLevel.fillAmount -= honeyS.sugar / 20;
+            arrowPos.x = arrowPos.x - honeyS.sugar * 10;
+            arrow.transform.SetPositionAndRotation(arrowPos, quat);
             onetime8 = false;}
 
 
@@ -199,8 +237,9 @@ public class CartScript : MonoBehaviour
            cartText.text = "Your cart is full";
             if(returns == 3)
             {
-                back.interactable = true;
-                returnText.text = "Go home to give items to mommy";
+               returnText.text = "Go home to give items to mommy";
+               GameManager.Instance.marketEventCompleted = true;
+               
             }
         }else if (foods.Count !=cartSize)
         {
@@ -208,9 +247,11 @@ public class CartScript : MonoBehaviour
         }
      
         sugar.text = "Sugarlevel: " + sugarlevel.ToString();
-       
-
-
+        }
+        else if (GameManager.Instance.mTimes != 1)
+        {
+            sugar.text = "YOU HAVE NO BUSINESS HERES";
+        }
 
     }
 

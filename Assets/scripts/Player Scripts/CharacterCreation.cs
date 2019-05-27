@@ -16,24 +16,10 @@ public class CharacterCreation : MonoBehaviour
     private Vector3 pos = new Vector3(0, 0, 0);
     private Quaternion quat;
 
-    private void Start()
-    {
-        
-      
-    }
 
     private void Update()
     {
-        if(SceneManager.GetActiveScene().ToString() == "CharacterCreation2")
-        {
-            if(Boy == true)
-            {
-              
-            }else if (Girl == true)
-            {
-              
-            }
-        }
+      
     }
 
 

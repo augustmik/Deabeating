@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-
 public class Click_handler : MonoBehaviour
 {
     public GameObject Clickable;
@@ -14,6 +12,9 @@ public class Click_handler : MonoBehaviour
     private Quaternion quat;
 
     public string levelName;
+
+    
+
    
 
     private void OnMouseOver()
@@ -23,6 +24,7 @@ public class Click_handler : MonoBehaviour
             if(levelName != SceneManager.GetActiveScene().name)
             {
              SceneManager.LoadScene(levelName);
+              
             }
             
         }

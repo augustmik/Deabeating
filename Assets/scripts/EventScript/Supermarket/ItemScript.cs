@@ -8,6 +8,7 @@ public class ItemScript : MonoBehaviour
 {
 
     public GameObject item;
+
     public bool firstrow;
 
     public bool firstcolumn;
@@ -27,97 +28,99 @@ public class ItemScript : MonoBehaviour
 
     private void Awake()
     {
-     orgPos = item.transform.position;
+        quat = item.transform.rotation;
+        orgPos = item.transform.position;
     }
 
 
     private void Update()
     {
-        CartScript cscript = item.transform.parent.GetComponent<CartScript>();
-        cart = cscript.foods;
-        returnS = cscript.returns+1;
-        cSize = cscript.cartSize;
-
-        if (firstcolumn == true )
+        if(GameManager.Instance.mTimes == 1)
         {
-            
-            newPos.x = item.transform.position.x+450;
-            newPos.y = item.transform.position.y+250;
-            newPos.z = item.transform.position.z;
-            
 
-            if (firstrow == false )
+            CartScript cscript = item.transform.parent.GetComponent<CartScript>();
+            cart = cscript.foods;
+            returnS = cscript.returns+1;
+            cSize = cscript.cartSize;
+
+            if (firstcolumn == true )
             {
-                newPos.x = item.transform.position.x + 450;
-                newPos.y = item.transform.position.y + 420;
+            
+                newPos.x = item.transform.position.x+450;
+                newPos.y = item.transform.position.y+250;
                 newPos.z = item.transform.position.z;
+            
+
+                if (firstrow == false )
+                {
+                    newPos.x = item.transform.position.x + 450;
+                    newPos.y = item.transform.position.y + 420;
+                    newPos.z = item.transform.position.z;
+                }
             }
-        }
 
-        if (secondcolumn == true )
-        {
-            newPos.x = item.transform.position.x + 300;
-            newPos.y = item.transform.position.y + 250;
-            newPos.z = item.transform.position.z;
-
-            if (firstrow == false )
+            if (secondcolumn == true )
             {
                 newPos.x = item.transform.position.x + 300;
-                newPos.y = item.transform.position.y + 420;
+                newPos.y = item.transform.position.y + 250;
                 newPos.z = item.transform.position.z;
+
+                if (firstrow == false )
+                {
+                    newPos.x = item.transform.position.x + 300;
+                    newPos.y = item.transform.position.y + 420;
+                    newPos.z = item.transform.position.z;
+                }
             }
-        }
 
-        if (thirdcolumn == true )
-        {
-            newPos.x = item.transform.position.x + 150;
-            newPos.y = item.transform.position.y + 220;
-            newPos.z = item.transform.position.z;
-
-            if (firstrow == false )
+            if (thirdcolumn == true )
             {
                 newPos.x = item.transform.position.x + 150;
-                newPos.y = item.transform.position.y + 420;
+                newPos.y = item.transform.position.y + 220;
                 newPos.z = item.transform.position.z;
+
+                if (firstrow == false )
+                {
+                    newPos.x = item.transform.position.x + 150;
+                    newPos.y = item.transform.position.y + 420;
+                    newPos.z = item.transform.position.z;
+                }
             }
-        }
 
-        if (fourthcolumn == true)
-        {
-            newPos.x = item.transform.position.x;
-            newPos.y = item.transform.position.y + 220;
-            newPos.z = item.transform.position.z;
-
-            if (firstrow == false)
+            if (fourthcolumn == true)
             {
-                newPos.x = item.transform.position.x+15;
-                newPos.y = item.transform.position.y + 420;
+                newPos.x = item.transform.position.x;
+                newPos.y = item.transform.position.y + 220;
                 newPos.z = item.transform.position.z;
+
+                if (firstrow == false)
+                {
+                    newPos.x = item.transform.position.x+15;
+                    newPos.y = item.transform.position.y + 420;
+                    newPos.z = item.transform.position.z;
+                }
             }
         }
-
 
     }
 
-
-
     private void OnMouseOver()
     {
-
-        if(Input.GetMouseButtonDown(0) && inCart == false && cart.Count <= cSize-1)
+        if(GameManager.Instance.mTimes == 1)
         {
-            inCart = true;
-            cart.Add(item);
-            item.transform.SetPositionAndRotation(newPos, quat);
-            
-        }
+            if(Input.GetMouseButtonDown(0) && inCart == false && cart.Count <= cSize-1)
+            {
+                inCart = true;
+                cart.Add(item);
+                item.transform.SetPositionAndRotation(newPos, quat);
+            }
 
-        else if (Input.GetMouseButtonDown(0) && inCart == true && returnS <= 3)
-        {
-            inCart = false;
-            cart.Remove(item);
-            item.transform.SetPositionAndRotation(orgPos, quat);
-            
+            else if (Input.GetMouseButtonDown(0) && inCart == true && returnS <= 3)
+            {
+                inCart = false;
+                cart.Remove(item);
+                item.transform.SetPositionAndRotation(orgPos, quat);
+            }
         }
     }
 
