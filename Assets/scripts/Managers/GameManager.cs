@@ -14,8 +14,19 @@ public class GameManager : MonoBehaviour
     public int sTimes = 0;
 
 
+    //Event booleans
     public bool marketEventCompleted = false;
     public bool motherHelped = false;
+
+
+    //Sugarlevel after market
+    public bool lowRed = false;
+    public bool lowYellow = false;
+    public bool lowOrange = false;
+    public bool Green = false;
+    public bool highRed = false;
+    public bool highOrange = false;
+    public bool highYellow = false;
 
 
 
@@ -32,4 +43,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
 }

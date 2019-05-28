@@ -106,7 +106,7 @@ public class ItemScript : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if(GameManager.Instance.mTimes == 1)
+        if(GameManager.Instance.marketEventCompleted == false)
         {
             if(Input.GetMouseButtonDown(0) && inCart == false && cart.Count <= cSize-1)
             {

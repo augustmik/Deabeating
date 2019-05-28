@@ -20,6 +20,7 @@ public class CartScript : MonoBehaviour
     public Text returnText;
     public Text cartText;
     public GameObject arrow;
+    public Button finish;
 
     public int cartSize = 4;
 
@@ -37,6 +38,8 @@ public class CartScript : MonoBehaviour
     private bool onetime8 = false;
     private bool onetime9 = false;
 
+
+
     private bool removed = false;
 
 
@@ -45,6 +48,7 @@ public class CartScript : MonoBehaviour
         arrowPos = arrow.transform.position;
         quat = arrow.transform.rotation;
         sugarLevel.fillAmount = 0;
+        Debug.Log(arrow.transform.position.x);
 
     }
 
@@ -239,8 +243,46 @@ public class CartScript : MonoBehaviour
             {
                returnText.text = "Go home to give items to mommy";
                GameManager.Instance.marketEventCompleted = true;
-               
-            }
+
+
+                    if(arrowPos.x > -970 - 460f && arrowPos.x < -940 - 460f)
+                    {
+                        GameManager.Instance.lowRed = true;
+                        Debug.Log("RED, TOO LOW");
+
+                    }else if (arrowPos.x > -940 - 460f && arrowPos.x < -905 - 460f)
+                    {
+                        GameManager.Instance.lowOrange = true;
+                        Debug.Log("ORANGE, TOO LOW");
+
+                    }else if (arrowPos.x > -905 - 460f && arrowPos.x < -885 - 460f)
+                    {
+                        GameManager.Instance.lowYellow = true;
+                        Debug.Log("YELLOW, TOO LOW");
+
+                    }else if (arrowPos.x > -885 - 460f && arrowPos.x < -860 - 460f)
+                    {
+                        GameManager.Instance.Green = true;
+                        Debug.Log("GREEN, PERFECT");
+
+                    }else if (arrowPos.x > -860 - 460f && arrowPos.x < -840 - 460f)
+                    {
+                        GameManager.Instance.highYellow = true;
+                        Debug.Log("YELLOW, TOO HIGH");
+
+                    }else if (arrowPos.x > -840 - 460f && arrowPos.x < -805 - 460f)
+                    {
+                        GameManager.Instance.highOrange = true;
+                        Debug.Log("ORANGE, TOO HIGH");
+
+                    }else if (arrowPos.x > -805 - 460f)
+                    {
+                        GameManager.Instance.highRed = true;
+                        Debug.Log("ORANGE, TOO HIGH");
+                    }
+
+
+                }
         }else if (foods.Count !=cartSize)
         {
             cartText.text = "";
@@ -248,11 +290,58 @@ public class CartScript : MonoBehaviour
      
         sugar.text = "Sugarlevel: " + sugarlevel.ToString();
         }
+
         else if (GameManager.Instance.mTimes != 1 && GameManager.Instance.marketEventCompleted == true)
         {
             returnText.text = "YOU HAVE NO BUSINESS HERES";
         }
 
+    }
+
+    public void Finish()
+    {
+        if (arrowPos.x > -990 - 460f && arrowPos.x < -940 - 460f)
+        {
+            GameManager.Instance.lowRed = true;
+            
+        }
+        else if (arrowPos.x > -940 - 460f && arrowPos.x < -905 - 460f)
+        {
+            GameManager.Instance.lowOrange = true;
+            
+        }
+        else if (arrowPos.x > -905 - 460f && arrowPos.x < -885 - 460f)
+        {
+            GameManager.Instance.lowYellow = true;
+           
+
+        }
+        else if (arrowPos.x > -885 - 460f && arrowPos.x < -860 - 460f)
+        {
+            GameManager.Instance.Green = true;
+         
+
+        }
+        else if (arrowPos.x > -860 - 460f && arrowPos.x < -840 - 460f)
+        {
+            GameManager.Instance.highYellow = true;
+            
+
+        }
+        else if (arrowPos.x > -840 - 460f && arrowPos.x < -805 - 460f)
+        {
+            GameManager.Instance.highOrange = true;
+          
+
+        }
+        else if (arrowPos.x > -805 - 460f)
+        {
+            GameManager.Instance.highRed = true;
+           
+        }
+
+        GameManager.Instance.marketEventCompleted = true;
+        returnText.text = "YOU CAN GO HOME NOW";
     }
 
     public void BacktoVillage()

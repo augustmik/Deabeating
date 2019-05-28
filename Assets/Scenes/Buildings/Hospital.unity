@@ -166,6 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Clickable: {fileID: 53946062}
   levelName: Test
+  NoAccess: {fileID: 0}
 --- !u!1 &471725587
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,12 +410,12 @@ PrefabInstance:
     - target: {fileID: 2152039301920048665, guid: d8ee677e1a3340642b2d3a1fd1304504,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -796
+      value: -798.4
       objectReference: {fileID: 0}
     - target: {fileID: 2152039301920048665, guid: d8ee677e1a3340642b2d3a1fd1304504,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 297
+      value: 366
       objectReference: {fileID: 0}
     - target: {fileID: 2152039301920048665, guid: d8ee677e1a3340642b2d3a1fd1304504,
         type: 3}
@@ -469,7 +470,7 @@ PrefabInstance:
     - target: {fileID: 2152039301920048665, guid: d8ee677e1a3340642b2d3a1fd1304504,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -3471926617046923872, guid: d8ee677e1a3340642b2d3a1fd1304504,
         type: 3}
