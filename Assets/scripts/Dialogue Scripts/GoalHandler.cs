@@ -5,8 +5,8 @@ using UnityEngine;
 public class GoalHandler : MonoBehaviour
 {
 
-    private string[] goal;
-    private Goal goalO;
+    private string[] goal = new string[10];
+    public Goal[] goals;
     //private var jsonTextFile;
     //Load text from a JSON file (Assets/Resources/Text/jsonFile01.json)
 
@@ -20,14 +20,21 @@ public class GoalHandler : MonoBehaviour
 
     void Start()
     {
-        goal = new string[10];
+        //goal = new string[10];
         var jsonTextFile = Resources.Load<TextAsset>("Goals");
         Debug.Log(jsonTextFile.ToString());
-        goalO = CreateFromJSON(jsonTextFile.ToString());
-        Debug.Log(goalO.goal);
+        goals = JsonUtility.FromJson<Goal[]>(jsonTextFile.ToString());
+        //CreateFromJSON(jsonTextFile.ToString());
+        Debug.Log(goals[0]);
+        Debug.Log(goals[1].goalText);
 
     }
 
+    public string[] GoalsToList()
+    {
+
+        return goal;
+    }
     public static Goal CreateFromJSON(string jsonString)
     {
         return JsonUtility.FromJson<Goal>(jsonString);
