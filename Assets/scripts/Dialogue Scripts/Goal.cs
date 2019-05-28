@@ -6,7 +6,7 @@ using UnityEngine;
 public class Goal
 {
     // Start is called before the first frame update
-    public string[] goalText;
+    public string goalText;
     //public string goal2;
     //public int reward;
 

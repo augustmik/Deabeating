@@ -1,42 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GoalHandler : MonoBehaviour
 {
 
-    private string[] goal = new string[10];
-    public Goal[] goals;
-    //private var jsonTextFile;
-    //Load text from a JSON file (Assets/Resources/Text/jsonFile01.json)
-
-    //Then use JsonUtility.FromJson<T>() to deserialize jsonTextFile into an object
-
-
-    // Given JSON input:
-    // {"name":"Dr Charles","lives":3,"health":0.8}
-    // this example will return a PlayerInfo object with
-    // name == "Dr Charles", lives == 3, and health == 0.8f.
+    //private string[] goal = new string[10];
+    public static GoalRoot allGoals;
+    private static int currentGoal = 0;
+    //private GameObject goalHolder;
+    public Text goalText;
 
     void Start()
     {
         //goal = new string[10];
         var jsonTextFile = Resources.Load<TextAsset>("Goals");
-        Debug.Log(jsonTextFile.ToString());
-        goals = JsonUtility.FromJson<Goal[]>(jsonTextFile.ToString());
-        //CreateFromJSON(jsonTextFile.ToString());
-        Debug.Log(goals[0]);
-        Debug.Log(goals[1].goalText);
+        //Debug.Log(jsonTextFile.ToString());
+        allGoals = JsonUtility.FromJson<GoalRoot>(jsonTextFile.ToString());
+        //goalText.text = allGoals.Goal[0].goalText;
+        //currentNode = allGoals.Goal.First;
+        //Debug.Log(allGoals.Goal[0]);
+        //Debug.Log(allGoals.Goal[1].goalText);
 
     }
 
-    public string[] GoalsToList()
+    public static GoalRoot CreateFromJSON(string jsonString)
     {
-
-        return goal;
+        return JsonUtility.FromJson<GoalRoot>(jsonString);
     }
-    public static Goal CreateFromJSON(string jsonString)
+
+    public void DisplayNextGoal()
     {
-        return JsonUtility.FromJson<Goal>(jsonString);
+        goalText.text = allGoals.Goal[currentGoal].goalText;
+        currentGoal++;
     }
 }
