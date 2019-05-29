@@ -1,1 +1,1 @@
-{"Goal":[{"goalText":"First Test Goal."},{"goalText":"Second Test Goal."}]}
+{"Goal":[{"goalText":"First Test Goal."/*, "isComplete":"false"*/},{"goalText":"Second Test Goal."/*, "isComplete":"false"*/}]}
