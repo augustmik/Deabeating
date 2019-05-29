@@ -18,6 +18,7 @@ public class HealthBar : MonoBehaviour
     {
         return bar;
     }
+  
     public void SetSize (float sizeNormalized) //from  0 to 1
     {
         bar.localScale = new Vector3(sizeNormalized, 1f);
@@ -30,12 +31,9 @@ public class HealthBar : MonoBehaviour
         if (size >= 1f) { size = 1f; }
         bar.localScale = new Vector3(size, 1f);
     }
-
-    public void SetSizeLower() //from  0 to 1
+    // Update is called once per frame
+    void Update()
     {
-        Transform bar = transform.Find("Bar");
-        size -= .2f;
-        if (size >= 1f) { size = 1f; }
-        bar.localScale = new Vector3(size, 1f);
+
     }
 }
