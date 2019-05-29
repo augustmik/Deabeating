@@ -9,6 +9,7 @@ public class Goal
     public string goalText;
     //public string goal2;
     //public int reward;
+    //public bool isComplete;
 
     /*public static Goal CreateFromJSON(string jsonString)
     {
