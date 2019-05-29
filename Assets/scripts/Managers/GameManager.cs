@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public bool motherHelped = false;
 
 
+
     //Sugarlevel after market
     public bool lowRed = false;
     public bool lowYellow = false;
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
     public bool highRed = false;
     public bool highOrange = false;
     public bool highYellow = false;
+
 
 
 
