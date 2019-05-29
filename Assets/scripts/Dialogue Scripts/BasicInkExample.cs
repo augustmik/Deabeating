@@ -16,7 +16,7 @@ public class BasicInkExample : MonoBehaviour {
 	// Creates a new Story object with the compiled story which we can then play!
 	void StartStory () {
 		story = new Story (inkJSONAsset.text);
-       // story.BindExternalFunction("returnToGame", null);
+       //story.BindExternalFunction("returnToGame", null);
 		RefreshView();
 	}
 	

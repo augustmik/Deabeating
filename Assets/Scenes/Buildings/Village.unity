@@ -1330,6 +1330,13 @@ MonoBehaviour:
   sTimes: 0
   marketEventCompleted: 0
   motherHelped: 0
+  lowRed: 0
+  lowYellow: 0
+  lowOrange: 0
+  Green: 0
+  highRed: 0
+  highOrange: 0
+  highYellow: 0
 --- !u!4 &1889778929
 Transform:
   m_ObjectHideFlags: 0
@@ -1408,7 +1415,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
