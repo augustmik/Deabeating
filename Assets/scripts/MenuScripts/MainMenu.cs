@@ -20,5 +20,10 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void BeginChapter()
+    {
+        SceneManager.LoadScene("Room");
+    }
  
 }

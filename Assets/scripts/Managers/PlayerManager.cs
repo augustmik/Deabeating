@@ -34,7 +34,7 @@ public class PlayerManager : MonoBehaviour
             GameManager.Instance.hTimes++;
             playername.text = "Welcome home " + playernamestr;
 
-            if(GameManager.Instance.hTimes < 2)
+            if(GameManager.Instance.hTimes < 2 )
             {
                 thanks.text = "Good morning " + playernamestr + " I don't feel too good \n could you get me something to eat?";
             }
