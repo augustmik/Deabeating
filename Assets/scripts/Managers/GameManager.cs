@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     //Event booleans
     public bool marketEventCompleted = false;
     public bool motherHelped = false;
+    public bool leftHome = false;
+    public bool backHome = false;
+    public bool tutorialFinished = false;
 
 
 

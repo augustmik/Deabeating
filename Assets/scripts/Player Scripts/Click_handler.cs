@@ -28,9 +28,28 @@ public class Click_handler : MonoBehaviour
                 if(levelName == "Home" && GameManager.Instance.marketEventCompleted == false)
                 {
                     NoAccess.text = "You have to go to the market first";
-                }
+                } 
+
              SceneManager.LoadScene(levelName);
               
+            }
+
+            if(GameManager.Instance.leftHome == false && SceneManager.GetActiveScene().name == "Home_tutorial")
+            {
+                levelName = "Village";
+                GameManager.Instance.leftHome = true;
+                SceneManager.LoadScene(levelName);
+            }
+
+            if (GameManager.Instance.leftHome == true && SceneManager.GetActiveScene().name == "Village" && GameManager.Instance.tutorialFinished == false)
+            {
+                levelName = "Hospital_tutorial";
+                SceneManager.LoadScene(levelName);
+            }
+
+            if(SceneManager.GetActiveScene().name == "Village" && GameManager.Instance.tutorialFinished == true)
+            {
+                SceneManager.LoadScene("Chapter1");
             }
             
         }
