@@ -41,7 +41,7 @@ public class CharacterCreation : MonoBehaviour
     public void StartGame()
     {
         PlayerManager.playernamestr = playerName.text;
-        SceneManager.LoadScene("Home");
+        SceneManager.LoadScene("Home_tutorial");
     }
 
 }
