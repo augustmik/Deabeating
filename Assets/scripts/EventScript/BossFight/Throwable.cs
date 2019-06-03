@@ -9,62 +9,50 @@ public class Throwable : MonoBehaviour
     public Sprite colaSprite;
     public Sprite chipsSprite;
     private Vector3 startPos;
-    public GameObject attackObj;
-    public Camera cam;
-    public int cooldown;
     private int randomA;
+    private float timer = 0.0f;
+    private float waitTime = 3.0f;
+    public int cooldown;
+    private bool colaCheck = false;
     bool failsafe = true;
 
     void Start()
     {
         rBody = GetComponent<Rigidbody2D>();
-        sRend = GetComponent<SpriteRenderer>(); //onBecameinvisible
-        startPos = new Vector3(-252, 266);//attackObj.transform.position;
-
-        StartCoroutine(MyCoroutine(cooldown));
-
-
-        //From: -263, 266; To: 544, -261
-    }
-
-
-    IEnumerator MyCoroutine(int duration)
-    {
-        while (true)
+        sRend = GetComponent<SpriteRenderer>();
+        startPos = new Vector3(transform.position.x, transform.position.y);
+        randomA = Random.Range(0, 2);
+        switch (randomA)
         {
-            failsafe = true;
-            randomA =  Random.Range(0, 2);
-            switch (randomA)
-            {
-                case 0:
-                    ThrowChips();
-                    break;
-                case 1:
-                    ThrowCola();
-                    break;
-                default:
-                    Debug.Log("Switch broke");
-                    break;
-            }
-            //public static Object Instantiate(Object original);
-
-            Resets();
-            yield return new WaitForSeconds(duration);    //Wait one frame
+            case 0:
+                ThrowChips();
+                break;
+            case 1:
+                ThrowCola();
+                break;
+            default:
+                Debug.Log("Switch broke");
+                break;
         }
+
     }
+
 
     void Update()
     {
-        if (failsafe == true)
+        timer += Time.deltaTime;
+        if (colaCheck && timer >= 0.2f)
         {
-            if (attackObj.transform.position.y >= 2f * cam.orthographicSize) //reset for cola
-            {
-                //Debug.Log("Resets");
-                rBody.velocity = new Vector2(0, 0);
-                attackObj.transform.Translate(new Vector3(750, 415, 0));
-                failsafe = false;
-            }
+            rBody.velocity = new Vector2(0, 0);
+            transform.Translate(new Vector3(750, 415, 0));    //Cola attack move
+            colaCheck = false;
         }
+
+        if (transform.position.y <= -400.0f)
+        {
+            Destroy(gameObject);
+        }
+
     }
     public void ThrowChips()
     {
@@ -73,13 +61,9 @@ public class Throwable : MonoBehaviour
     }
     public void ThrowCola()
     {
+        colaCheck = true;
         sRend.sprite = colaSprite;
         rBody.velocity = new Vector2(170, 700);
     }
-    public void Resets()
-    {
-        //GameObject penis = gameObject;
-        Instantiate(gameObject);
-        Destroy(gameObject);
-    }
+
 }
