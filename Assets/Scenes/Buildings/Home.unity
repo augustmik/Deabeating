@@ -139,7 +139,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clickable: {fileID: 53946062}
+  panel: {fileID: 0}
   levelName: Village
+  NoAccess: {fileID: 0}
 --- !u!61 &53946066
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -300,7 +302,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ced44bbf46555bf4aa181823e3e52a00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 36a97a53434ee7142867fc8803efd1aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -464,7 +466,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clickable: {fileID: 492460221}
+  panel: {fileID: 0}
   levelName: Room
+  NoAccess: {fileID: 0}
 --- !u!212 &492460225
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -767,7 +771,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clickable: {fileID: 661982399}
+  panel: {fileID: 0}
   levelName: Village
+  NoAccess: {fileID: 0}
 --- !u!212 &661982403
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -850,6 +856,16 @@ MonoBehaviour:
   sTimes: 0
   marketEventCompleted: 0
   motherHelped: 0
+  leftHome: 0
+  backHome: 0
+  tutorialFinished: 0
+  lowRed: 0
+  lowYellow: 0
+  lowOrange: 0
+  Green: 0
+  highRed: 0
+  highOrange: 0
+  highYellow: 0
 --- !u!4 &1008101671
 Transform:
   m_ObjectHideFlags: 0
@@ -946,11 +962,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 111
       objectReference: {fileID: 0}
-    - target: {fileID: -3471926617046923872, guid: d8ee677e1a3340642b2d3a1fd1304504,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2152039301920048742, guid: d8ee677e1a3340642b2d3a1fd1304504,
         type: 3}
       propertyPath: m_Enabled
@@ -970,6 +981,11 @@ PrefabInstance:
     - target: {fileID: 2152039301920048743, guid: d8ee677e1a3340642b2d3a1fd1304504,
         type: 3}
       propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3471926617046923872, guid: d8ee677e1a3340642b2d3a1fd1304504,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:

@@ -12,7 +12,14 @@ public class CartScript : MonoBehaviour
     private float sugarlevel = 0f;
     public int returns = 0;
 
+
+    Graphic testg;
+    public Image returnIcon1;
+    public Image returnIcon2;
+    public Image returnIcon3;
+
     //public Image returnsI;
+
     public Image sugarLevel;
     public List<GameObject> foods = new List<GameObject>();
     public Text sugar;
@@ -45,10 +52,11 @@ public class CartScript : MonoBehaviour
 
     private void Start()
     {
+        testg = GetComponent<Graphic>();
         arrowPos = arrow.transform.position;
         quat = arrow.transform.rotation;
         sugarLevel.fillAmount = 0;
-        Debug.Log(arrow.transform.position.x);
+        
 
     }
 
@@ -225,14 +233,17 @@ public class CartScript : MonoBehaviour
         {
             case 1:
                 returnText.text = "You have used one out of three returns";
+                returnIcon1.color = Color.red;
                 break;
 
             case 2:
                 returnText.text = "You have used two out of three returns";
+                returnIcon2.color = Color.red;
                 break;
 
             case 3:
                 returnText.text = "You have used three out of three returns";
+                returnIcon3.color = Color.red;
                 break;
         }
 

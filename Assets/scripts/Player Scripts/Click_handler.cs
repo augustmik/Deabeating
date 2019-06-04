@@ -12,18 +12,23 @@ public class Click_handler : MonoBehaviour
     private Vector3 pos = new Vector3(0, 0, 0);
     private Quaternion quat;
 
+    public GameObject panel;
+
     public string levelName;
     public Text NoAccess;
 
-    
 
-   
+    private void Awake()
+    {
+        panel.SetActive(false);
+    }
+
 
     private void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if(levelName != SceneManager.GetActiveScene().name)
+            if(levelName != SceneManager.GetActiveScene().name && GameManager.Instance.tutorialFinished == true)
             {
                 if(levelName == "Home" && GameManager.Instance.marketEventCompleted == false)
                 {
@@ -47,12 +52,22 @@ public class Click_handler : MonoBehaviour
                 SceneManager.LoadScene(levelName);
             }
 
+            /*if (GameManager.Instance.leftHome == true && SceneManager.GetActiveScene().name == "Village" && GameManager.Instance.tutorialFinished == false)
+            {
+            }*/
+            
+
             if(SceneManager.GetActiveScene().name == "Village" && GameManager.Instance.tutorialFinished == true)
             {
                 SceneManager.LoadScene("Chapter1");
             }
             
         }
+    }
+
+    public void hideError()
+    {
+        panel.SetActive(false);
     }
 
 
