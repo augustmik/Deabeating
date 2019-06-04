@@ -330,7 +330,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9e65b7f514d7be248a5fbb6cac61c835, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a55e3cd2a8dc0b14984befc5fb89cac9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -669,8 +669,8 @@ MonoBehaviour:
   Nurse: {fileID: 1624416071}
   Mother: {fileID: 1731334212}
   Message: {fileID: 473220160}
-  view2: {fileID: 21300000, guid: d761c2c28a41aa24288892d64fa6d0ce, type: 3}
-  view3: {fileID: 21300000, guid: 74106474de462de458b6de143720eb00, type: 3}
+  view2: {fileID: 21300000, guid: dd35e4b5c180e69479d3a88f7363c37e, type: 3}
+  view3: {fileID: 21300000, guid: 0b9824836ccb6e949a828a0896b920b6, type: 3}
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1014,7 +1014,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1008101671}
   - component: {fileID: 1008101670}
-  - component: {fileID: 1008101672}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1063,28 +1062,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1008101672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1008101669}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d5c5635f2e019e40a22ed3c954d216a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BG: {fileID: 150678823}
-  panel: {fileID: 996360511}
-  text: {fileID: 473220158}
-  back: {fileID: 661982399}
-  GoalBG: {fileID: 132417320}
-  Nurse: {fileID: 1624416071}
-  Mother: {fileID: 1731334212}
-  Message: {fileID: 473220160}
-  view2: {fileID: 21300000, guid: d761c2c28a41aa24288892d64fa6d0ce, type: 3}
-  view3: {fileID: 21300000, guid: 74106474de462de458b6de143720eb00, type: 3}
 --- !u!1 &1624416071
 GameObject:
   m_ObjectHideFlags: 0

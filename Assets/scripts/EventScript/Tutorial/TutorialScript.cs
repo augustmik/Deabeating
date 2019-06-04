@@ -72,7 +72,7 @@ public class TutorialScript : MonoBehaviour
             timer += Time.deltaTime;
             if (timer > 0f && timer < 3f)
             {
-                Message.text = " Nurse: \n Hey, you are right on time for the appointment! \n Please sit down!";
+                Message.text = " Nurse: \n  Hey, you are right on time for the appointment! \n  Please sit down!";
             }
 
             if(timer > 3f && timer < 7f)
@@ -82,7 +82,7 @@ public class TutorialScript : MonoBehaviour
                 Destroy(Mother);
                 renderer.sprite = view2;
                 
-                Message.text = " Nurse: \n Next I will measure your blood sugar. \n And don’t be afraid. \n It may sting a bit, but it won’t hurt.";
+                Message.text = "    Nurse: \n   Next I will measure your blood sugar. \n  And don’t be afraid. \n It may sting a bit, but it won’t hurt.";
             }
 
             if (timer > 7f)
@@ -92,7 +92,7 @@ public class TutorialScript : MonoBehaviour
 
                 rectP.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightP);
                 rectT.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightT);
-                Message.text = " Nurse: \n Soon we will see a value. \n If you haven’t eaten anything for 8 - 10 hours, \n  the normal value is 5,6. \n  So if your value is higher we know you might have diabetes.";
+                Message.text = "    Nurse: \n   Soon we will see a value. \n    If you haven’t eaten anything for 8 - 10 hours, \n  the normal value is 5,6. \n     So if your value is higher we know you might have diabetes.";
             }
 
            
@@ -100,39 +100,39 @@ public class TutorialScript : MonoBehaviour
                 {
                     renderer.sprite = view2;
                     Nurse.transform.SetPositionAndRotation(view2Pos, rot);
-                    Message.text = " Nurse: \n So now we know that you have diabetes.";
+                    Message.text = "    Nurse: \n   So now we know that you have diabetes.";
                 }
                    
                 if (timer > 13f)
                 {
-                  Message.text = " Mother: \n How could I have discovered this myself?";
+                  Message.text = "  Mother: \n  How could I have discovered this myself?";
                 }
 
                 if (timer > 16f)
                 {
-                    Message.text = " Nurse: \n A few symptoms could be that you have a blurry vision and that you are tired a lot";
+                    Message.text = "    Nurse: \n   A few symptoms could be that you have a blurry vision and that you are tired a lot";
                 }
 
                 if (timer > 19f)
                 {
-                    Message.text = " Mother: \n So this means if my son gets for example blurry vision he has diabetes as well?";
+                    Message.text = "    Mother: \n  So this means if my son gets for example blurry vision he has diabetes as well?";
                 }
 
                 if (timer > 22f)
                 {
-                    Message.text = " Nurse: \n No, this is not always the case.\n So when something like this happens, \n always be sure to see a adoctor as soon as possible";
+                    Message.text = "    Nurse: \n   No, this is not always the case.\n  So when something like this happens, \n    always be sure to see a adoctor as soon as possible";
                 }
 
                 if (timer > 25f)
                 {
-                    Message.text = " Mother: \n Thank you for your help! ";
+                    Message.text = "    Mother: \n  Thank you for your help! ";
                 }
 
                 if (timer > 28f)
                 {
                     back.SetActive(true);
                     GoalBG.transform.SetPositionAndRotation(new Vector3(920, 600, 0), rot);
-                    Message.text = " Nurse: \n You're welcome! ";
+                    Message.text = "    Nurse: \n You're welcome! ";
                     GameManager.Instance.tutorialFinished = true;
                 }
 

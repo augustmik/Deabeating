@@ -330,7 +330,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ced44bbf46555bf4aa181823e3e52a00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08a80055f1cf97146a66305ced93d632, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -411,7 +411,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: asd
+  m_Text: 
 --- !u!222 &473220161
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1002,6 +1002,9 @@ MonoBehaviour:
   sTimes: 0
   marketEventCompleted: 0
   motherHelped: 0
+  leftHome: 0
+  backHome: 0
+  tutorialFinished: 0
   lowRed: 0
   lowYellow: 0
   lowOrange: 0
@@ -1035,8 +1038,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d5c5635f2e019e40a22ed3c954d216a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  msgBG: {fileID: 0}
+  BG: {fileID: 0}
+  panel: {fileID: 0}
+  text: {fileID: 0}
+  back: {fileID: 0}
+  GoalBG: {fileID: 0}
+  Nurse: {fileID: 0}
+  Mother: {fileID: 0}
   Message: {fileID: 473220160}
+  view2: {fileID: 0}
+  view3: {fileID: 0}
 --- !u!114 &1008101673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1050,7 +1061,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goalText: {fileID: 793180000}
-  timer: 0
 --- !u!1001 &1014261727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1133,11 +1143,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 111
       objectReference: {fileID: 0}
-    - target: {fileID: -3471926617046923872, guid: d8ee677e1a3340642b2d3a1fd1304504,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2152039301920048742, guid: d8ee677e1a3340642b2d3a1fd1304504,
         type: 3}
       propertyPath: m_Enabled
@@ -1157,6 +1162,11 @@ PrefabInstance:
     - target: {fileID: 2152039301920048743, guid: d8ee677e1a3340642b2d3a1fd1304504,
         type: 3}
       propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3471926617046923872, guid: d8ee677e1a3340642b2d3a1fd1304504,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
