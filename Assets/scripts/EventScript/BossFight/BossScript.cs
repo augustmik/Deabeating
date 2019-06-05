@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BossScript : MonoBehaviour
@@ -12,25 +13,46 @@ public class BossScript : MonoBehaviour
     public float hpDecrease;
     private int randomA;
     public Image bossHPBar;
-    
     private Vector3 startPos;
+    public GameObject losePanel;
+    public GameObject preFightPanel;
+    private bool startCheck = false;
 
-    void Start()
+    void Awake()
     {
         startPos = locationObj.transform.position;
+        locationObj.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer > waitTime)
+        if (losePanel.activeSelf == false && startCheck == true)
         {
-            //timeNow = timer;
-            Instantiate(attackPrefab, startPos, Quaternion.identity);
+            timer += Time.deltaTime;
 
-            timer = timer - waitTime;
+            if (timer > waitTime)
+            {
+                //timeNow = timer;
+                Instantiate(attackPrefab, startPos, Quaternion.identity);
+
+                timer = timer - waitTime;
+            }
+            bossHPBar.fillAmount -= hpDecrease * Time.deltaTime;
+            if (bossHPBar.fillAmount <= 0.0f)
+            {
+                SceneManager.LoadScene("GameWin");
+            }
         }
         bossHPBar.fillAmount -= hpDecrease * Time.deltaTime;
+    }
+    public void ResetScene()
+    {
+        SceneManager.LoadScene("Boss");
+    }
+    public void StartFight()
+    {
+        preFightPanel.SetActive(false);
+        startCheck = true;
+        locationObj.SetActive(true);
     }
 }

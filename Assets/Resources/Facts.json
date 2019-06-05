@@ -1,0 +1,12 @@
+{
+"Facts":[
+	{"factText":"It is important to get screened if you suspect that you or someone you know could have diabetes."},
+	{"factText":"If your blood sugar level after waking up is 5.6 mmol/L you probably dont have diabetes."},
+	{"factText":"If your blood sugar level after waking up is from 5.6 mmol/L to 6.9 mmol/L it is considered prediabetes."},
+	{"factText":"If your blood sugar level after waking up is above 7 mmol/L on two tests, you have diabetes."},
+	{"factText":"Too high blood sugar can cause symptoms like: increased thirst, blurred vision, frequent urination."},
+	{"factText":"Insulin is the only thing that helps if blood sugar levels are too high."},
+	{"factText":"Too low blood sugar can cause symptoms like: sweating, weakness, dizziness, headache, slurred speech, confusion."},
+	{"factText":"Honey is one of the best things to get if your bloodsugar is really low."}
+	]
+}
