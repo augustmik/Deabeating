@@ -7,21 +7,33 @@ public class Player : MonoBehaviour
 {
     public Image playerHPBar;
     public float reduceHPAmount;
-    
+    public GameObject losePanel;
+    public GameObject charScript;
 
+    void Awake()
+    {
+        charScript = GameObject.Find("CharacterCreation");
+    }
     void Start()
     {
-
+        gameObject.GetComponent<SpriteRenderer>().sprite = charScript.GetComponent<CharacterCreation>().getSprite();
+        losePanel.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        //check if player is hit
+        if (other.gameObject.tag == "AttackTag")
+        {
+            reducePlayerHP();
+        }
     }
 
     public void reducePlayerHP()
     {
         playerHPBar.fillAmount -= reduceHPAmount;
+        if (playerHPBar.fillAmount <= 0.1f)
+        {
+            losePanel.SetActive(true);
+        }
     }
 }

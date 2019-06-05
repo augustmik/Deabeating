@@ -44,7 +44,7 @@ public class Throwable : MonoBehaviour
         if (colaCheck && timer >= 0.2f)
         {
             rBody.velocity = new Vector2(0, 0);
-            transform.Translate(new Vector3(750, 415, 0));    //Cola attack move
+            transform.Translate(new Vector3(750, 415, 0));    //Cola attack move Up
             colaCheck = false;
         }
 
