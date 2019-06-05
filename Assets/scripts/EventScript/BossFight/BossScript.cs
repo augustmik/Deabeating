@@ -12,7 +12,7 @@ public class BossScript : MonoBehaviour
     public float hpDecrease;
     private int randomA;
     public Image bossHPBar;
-    private int randomA;
+    
     private Vector3 startPos;
 
     void Start()

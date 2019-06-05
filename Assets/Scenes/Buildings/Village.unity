@@ -1254,7 +1254,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1681953231}
-        m_MethodName: hideError
+        m_MethodName: HideError
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1727,7 +1727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clickable: {fileID: 1681953228}
-  panel: {fileID: 972658182}
+  panel: {fileID: 0}
   levelName: Hospital
   NoAccess: {fileID: 1742496386}
 --- !u!1 &1739733514

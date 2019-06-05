@@ -13,15 +13,12 @@ public class GameManager : MonoBehaviour
     public int hTimes = 0;
     public int sTimes = 0;
 
-
     //Event booleans
     public bool marketEventCompleted = false;
     public bool motherHelped = false;
     public bool leftHome = false;
     public bool backHome = false;
     public bool tutorialFinished = false;
-
-
 
     //Sugarlevel after market
     public bool lowRed = false;
@@ -31,9 +28,6 @@ public class GameManager : MonoBehaviour
     public bool highRed = false;
     public bool highOrange = false;
     public bool highYellow = false;
-
-
-
 
     private void Awake()
     {

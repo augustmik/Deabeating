@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Click_handler : MonoBehaviour
 {
@@ -16,6 +14,13 @@ public class Click_handler : MonoBehaviour
 
     public string levelName;
     public Text NoAccess;
+
+    private float timer;
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
+    }
 
 
     private void Awake()
@@ -34,9 +39,7 @@ public class Click_handler : MonoBehaviour
                 {
                     NoAccess.text = "You have to go to the market first";
                 } 
-
-             SceneManager.LoadScene(levelName);
-              
+                    SceneManager.LoadScene(levelName);
             }
 
             if(GameManager.Instance.leftHome == false && SceneManager.GetActiveScene().name == "Home_tutorial")
@@ -48,29 +51,27 @@ public class Click_handler : MonoBehaviour
 
             if (GameManager.Instance.leftHome == true && SceneManager.GetActiveScene().name == "Village" && GameManager.Instance.tutorialFinished == false)
             {
-                levelName = "Hospital_tutorial";
-                SceneManager.LoadScene(levelName);
+                SceneManager.LoadScene("Hospital_tutorial");
             }
 
-            /*if (GameManager.Instance.leftHome == true && SceneManager.GetActiveScene().name == "Village" && GameManager.Instance.tutorialFinished == false)
-            {
-            }*/
             
 
             if(SceneManager.GetActiveScene().name == "Village" && GameManager.Instance.tutorialFinished == true)
             {
                 SceneManager.LoadScene("Chapter1");
+               
             }
             
         }
     }
 
-    public void hideError()
+    public void HideError()
     {
         panel.SetActive(false);
+        Clickable.name = "Hospital";
     }
 
-
+    
     
 
 }
