@@ -20,6 +20,11 @@ public class GameManager : MonoBehaviour
     public bool backHome = false;
     public bool tutorialFinished = false;
 
+    //Player choices
+    public bool helpMother = false;
+    public bool rushToSchool = false;
+    public bool helpStranger = false;
+
     //Sugarlevel after market
     public bool lowRed = false;
     public bool lowYellow = false;
