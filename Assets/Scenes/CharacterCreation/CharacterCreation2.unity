@@ -203,7 +203,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 519420030}
-        m_MethodName: StartGame
+        m_MethodName: StartuGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -485,8 +485,8 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420029}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -511,12 +511,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beae5601c1ff0794f819f3168ecfbf92, type: 3}
+  m_Script: {fileID: 11500000, guid: 69bc31a292f4d5c4ca17cbdf2b5d28de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: {fileID: 227553324}
-  Boy: 0
-  Girl: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
