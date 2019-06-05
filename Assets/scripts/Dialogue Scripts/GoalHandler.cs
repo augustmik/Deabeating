@@ -14,7 +14,6 @@ public class GoalHandler : MonoBehaviour
     void Start()
     {
         var jsonTextFile = Resources.Load<TextAsset>("Goals");
-        //Debug.Log(jsonTextFile.ToString());
         allGoals = JsonUtility.FromJson<GoalRoot>(jsonTextFile.ToString());
         //goalText.text = allGoals.Goal[1].goalText;
     }
