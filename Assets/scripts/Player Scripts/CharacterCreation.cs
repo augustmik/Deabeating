@@ -8,14 +8,9 @@ public class CharacterCreation : MonoBehaviour
 {
 
     public static CharacterCreation instance { get; private set; }
-    public InputField playerName;
     public Sprite boySprite;
     public Sprite girlSprite;
     public bool isBoy;
-
-    private Vector3 pos = new Vector3(0, 0, 0);
-    private Quaternion quat;
-
 
     void Awake()
     {
@@ -50,12 +45,6 @@ public class CharacterCreation : MonoBehaviour
         isBoy = false;
         SceneManager.LoadScene("CharacterCreation2");
         
-    }
-
-    public void StartGame()
-    {
-        PlayerManager.playernamestr = playerName.text;
-        SceneManager.LoadScene("Home_tutorial");
     }
 
 }
