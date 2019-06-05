@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class GoalHandler : MonoBehaviour
 {
-
     public static GoalRoot allGoals;
     private static int currentGoal = 0;
     public Text goalText;
@@ -18,7 +17,6 @@ public class GoalHandler : MonoBehaviour
         //Debug.Log(jsonTextFile.ToString());
         allGoals = JsonUtility.FromJson<GoalRoot>(jsonTextFile.ToString());
         //goalText.text = allGoals.Goal[1].goalText;
-
     }
 
     private void Update()

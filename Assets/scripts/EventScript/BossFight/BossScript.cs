@@ -43,6 +43,7 @@ public class BossScript : MonoBehaviour
                 SceneManager.LoadScene("GameWin");
             }
         }
+        bossHPBar.fillAmount -= hpDecrease * Time.deltaTime;
     }
     public void ResetScene()
     {
