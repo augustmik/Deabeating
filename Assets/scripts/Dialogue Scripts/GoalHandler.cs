@@ -26,7 +26,7 @@ public class GoalHandler : MonoBehaviour
             if (timer < 5.1f)
             {
                timer += Time.deltaTime;
-                if (timer > 5f)
+                if (timer > 2f)
                 {
                     goalText.text = allGoals.Goal[1].goalText;
                 }

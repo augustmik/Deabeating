@@ -10,19 +10,6 @@ public class MarketTutorial : MonoBehaviour
 
     float timer = 0;
 
-   /* private void Update()
-    {
-        timer += Time.deltaTime;
-        if(GameManager.Instance.marketEventCompleted == false)
-        {
-            panel.SetActive(true);
-
-            if(timer > 10)
-            {
-                panel.SetActive(false);
-            }
-        }
-    }*/
 
     public void hideTutorial()
     {

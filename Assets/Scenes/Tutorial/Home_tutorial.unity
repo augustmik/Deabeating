@@ -492,6 +492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clickable: {fileID: 492460221}
+  panel: {fileID: 0}
   levelName: Room
   NoAccess: {fileID: 0}
 --- !u!212 &492460225
@@ -718,6 +719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clickable: {fileID: 661982399}
+  panel: {fileID: 0}
   levelName: Village
   NoAccess: {fileID: 0}
 --- !u!212 &661982403
@@ -1005,6 +1007,9 @@ MonoBehaviour:
   leftHome: 0
   backHome: 0
   tutorialFinished: 0
+  helpMother: 0
+  rushToSchool: 0
+  helpStranger: 0
   lowRed: 0
   lowYellow: 0
   lowOrange: 0
@@ -1039,7 +1044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BG: {fileID: 0}
-  panel: {fileID: 0}
+  panel: {fileID: 996360511}
   text: {fileID: 0}
   back: {fileID: 0}
   GoalBG: {fileID: 0}

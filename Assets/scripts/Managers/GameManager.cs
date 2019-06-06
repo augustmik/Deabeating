@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public bool leftHome = false;
     public bool backHome = false;
     public bool tutorialFinished = false;
+    public bool test = false;
 
     //Player choices
     public bool helpMother = false;

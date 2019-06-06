@@ -102,6 +102,8 @@ public class PlayerManager : MonoBehaviour
                 villageHealth.fillAmount += 0.25f;
             }
         }
+
+        
     }
 
   
