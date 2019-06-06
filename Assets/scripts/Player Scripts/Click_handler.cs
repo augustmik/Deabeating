@@ -10,7 +10,6 @@ public class Click_handler : MonoBehaviour
     private Vector3 pos = new Vector3(0, 0, 0);
     private Quaternion quat;
 
-    public GameObject panel;
 
     public string levelName;
     public Text NoAccess;
@@ -23,10 +22,6 @@ public class Click_handler : MonoBehaviour
     }
 
 
-    private void Awake()
-    {
-        panel.SetActive(false);
-    }
 
 
     private void OnMouseOver()
@@ -54,24 +49,22 @@ public class Click_handler : MonoBehaviour
                 SceneManager.LoadScene("Hospital_tutorial");
             }
 
-            
-
-            if(SceneManager.GetActiveScene().name == "Village" && GameManager.Instance.tutorialFinished == true)
+            if(SceneManager.GetActiveScene().name == "Village" && GameManager.Instance.tutorialFinished == true && GameManager.Instance.test == false)
             {
                 SceneManager.LoadScene("Chapter1");
-               
+                GameManager.Instance.test = true;
             }
+
+            if(SceneManager.GetActiveScene().name == "Village" && GameManager.Instance.test == true && Clickable.name == "Market")
+            {
+                SceneManager.LoadScene("Market");
+            }
+
+
             
         }
     }
 
-    public void HideError()
-    {
-        panel.SetActive(false);
-        Clickable.name = "Hospital";
-    }
-
-    
     
 
 }
