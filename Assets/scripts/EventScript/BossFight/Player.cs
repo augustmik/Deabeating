@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public Image playerHPBar;
     public float reduceHPAmount;
     public GameObject losePanel;
-    public GameObject charScript;
+    private GameObject charScript;
 
     void Awake()
     {

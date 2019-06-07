@@ -14,7 +14,6 @@ public class CharacterCreation : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log(instance);
         if (instance == null)
         {
             instance = this;
@@ -36,16 +35,16 @@ public class CharacterCreation : MonoBehaviour
     public void ChooseBoy()
     {
         isBoy = true;
-        SceneManager.LoadScene("Boss");
-        //SceneManager.LoadScene("CharacterCreation2");
+        //SceneManager.LoadScene("Boss");
+        SceneManager.LoadScene("CharacterCreation2");
 
     }
 
     public void ChooseGirl()
     {
         isBoy = false;
-        SceneManager.LoadScene("Boss");
-        //SceneManager.LoadScene("CharacterCreation2");
+        //SceneManager.LoadScene("Boss");
+        SceneManager.LoadScene("CharacterCreation2");
         
     }
 

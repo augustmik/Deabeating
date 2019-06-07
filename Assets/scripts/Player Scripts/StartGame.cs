@@ -7,6 +7,15 @@ using UnityEngine.UI;
 public class StartGame : MonoBehaviour
 {
     public InputField playerName;
+    public Image playerImage;
+    public GameObject charScript;
+
+    void Start()
+    {
+        charScript = GameObject.Find("CharacterCreation");
+        playerImage.sprite = charScript.GetComponent<CharacterCreation>().getSprite();
+
+    }
     public void StartuGame()
     {
         PlayerManager.playernamestr = playerName.text;
