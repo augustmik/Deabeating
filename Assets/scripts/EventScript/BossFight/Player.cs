@@ -13,11 +13,12 @@ public class Player : MonoBehaviour
     void Awake()
     {
         charScript = GameObject.Find("CharacterCreation");
+        losePanel.SetActive(false);
+
     }
     void Start()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = charScript.GetComponent<CharacterCreation>().getSprite();
-        losePanel.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D other)

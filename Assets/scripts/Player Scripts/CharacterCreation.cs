@@ -36,14 +36,16 @@ public class CharacterCreation : MonoBehaviour
     public void ChooseBoy()
     {
         isBoy = true;
-        SceneManager.LoadScene("CharacterCreation2");
+        SceneManager.LoadScene("Boss");
+        //SceneManager.LoadScene("CharacterCreation2");
 
     }
 
     public void ChooseGirl()
     {
         isBoy = false;
-        SceneManager.LoadScene("CharacterCreation2");
+        SceneManager.LoadScene("Boss");
+        //SceneManager.LoadScene("CharacterCreation2");
         
     }
 

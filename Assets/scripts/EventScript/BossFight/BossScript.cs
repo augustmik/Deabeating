@@ -26,7 +26,8 @@ public class BossScript : MonoBehaviour
 
     void Update()
     {
-        if (losePanel.activeSelf == false && startCheck == true)
+        
+        if (losePanel.activeSelf == false && startCheck == true && preFightPanel.activeSelf == false) 
         {
             timer += Time.deltaTime;
 
@@ -43,7 +44,6 @@ public class BossScript : MonoBehaviour
                 SceneManager.LoadScene("GameWin");
             }
         }
-        bossHPBar.fillAmount -= hpDecrease * Time.deltaTime;
     }
     public void ResetScene()
     {
