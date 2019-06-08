@@ -26,8 +26,6 @@ public class QuizHandler : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
-       
 
         // Getting current scene build index
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -57,6 +55,7 @@ public class QuizHandler : MonoBehaviour
         Invoke("LoadNextLevel", 1.5f);
         //SceneManager.LoadScene(currentSceneIndex + 1);
 
+
     }
 
     
@@ -79,6 +78,11 @@ public class QuizHandler : MonoBehaviour
     void LoadNextLevel()
     {
         SceneManager.LoadScene(currentSceneIndex + 1);
+    }
+
+    public void LoadBossLevel()
+    {
+        SceneManager.LoadScene("Boss");
     }
 
     // Method loads MainMenu scene
