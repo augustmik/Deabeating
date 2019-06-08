@@ -33,9 +33,7 @@ public class PlayerManager : MonoBehaviour
         //charScript = GameObject.Find("CharacterCreation");
         if (current.name.ToString() == "Home")
         {
-            GameManager.Instance.hTimes++;
-            //playername.text = "Welcome home " + playernamestr;
-
+            
             if(GameManager.Instance.tutorialFinished == true )
             {
                 thanks.text = "Good morning " + playernamestr + " I don't feel too good \n could you get me something to eat?";

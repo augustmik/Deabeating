@@ -18,15 +18,13 @@ public class QuizHandler : MonoBehaviour
     // Variable to contain current scene build index
     int currentSceneIndex;
 
-   
     public Text score;
-   
-
-
+    public GameObject panel;
+    
     // Use this for initialization
     void Start()
     {
-
+        panel.SetActive(false);
         // Getting current scene build index
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
@@ -50,9 +48,11 @@ public class QuizHandler : MonoBehaviour
         {
             element.gameObject.SetActive(false);
         }
-        
+        GameManager.Instance.Score += 1;
         correctSign.SetActive(true);
+        panel.SetActive(true);
         Invoke("LoadNextLevel", 1.5f);
+        score.text = "Score: " + GameManager.Instance.Score.ToString();
         //SceneManager.LoadScene(currentSceneIndex + 1);
 
 
@@ -68,9 +68,9 @@ public class QuizHandler : MonoBehaviour
         }
 
         incorrectSign.SetActive(true);
-
-       
-        Invoke("GotoMainMenu", 1.5f);
+        panel.SetActive(true);
+        score.text = "Score: " + GameManager.Instance.Score.ToString();
+        Invoke("GotoQuizMenu", 1.5f);
     }
 
 
@@ -86,7 +86,7 @@ public class QuizHandler : MonoBehaviour
     }
 
     // Method loads MainMenu scene
-    void GotoMainMenu()
+    void GotoQuizMenu()
     {
         SceneManager.LoadScene("School_quiz");
     }

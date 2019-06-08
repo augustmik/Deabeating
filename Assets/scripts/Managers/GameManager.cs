@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public int hTimes = 0;  //Debug reasons
     public int sTimes = 0;
 
+    public int Score = 0;
+
 
     //C1 Tracking until choice
     public bool leftHome = false;

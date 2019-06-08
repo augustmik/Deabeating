@@ -21,26 +21,10 @@ public class GoalHandler : MonoBehaviour
     private void Update()
     {
 
-       /* if (SceneManager.GetActiveScene().name == "Home_tutorial")
-        {
-            if (timer < 5.1f)
-            {
-               timer += Time.deltaTime;
-                if (timer > 8f)
-                {
-                    goalText.text = allGoals.Goal[1].goalText;
-                }
-            }
-        }
-        else if (SceneManager.GetActiveScene().name == "Village" && GameManager.Instance.leftHome == true)
+       if(SceneManager.GetActiveScene().name.ToString() == "Village" && GameManager.Instance.tutorialFinished == false)
         {
             goalText.text = allGoals.Goal[1].goalText;
         }
-        else if(SceneManager.GetActiveScene().name == "Hospital_tutorial" && GameManager.Instance.tutorialFinished == true)
-        {
-
-            goalText.text = allGoals.Goal[2].goalText;
-        }*/
         
     }
     public static GoalRoot CreateFromJSON(string jsonString)
