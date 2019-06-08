@@ -7,6 +7,8 @@ public class PlayerManager : MonoBehaviour
 {
 
     private static PlayerManager _instance;
+    //private GameObject gameManager;
+
     public static PlayerManager Instance
     {
         get
@@ -28,7 +30,7 @@ public class PlayerManager : MonoBehaviour
     private void Start()
     {
         Scene current = SceneManager.GetActiveScene();
-     
+        //charScript = GameObject.Find("CharacterCreation");
         if (current.name.ToString() == "Home")
         {
             GameManager.Instance.hTimes++;
@@ -37,8 +39,15 @@ public class PlayerManager : MonoBehaviour
             if(GameManager.Instance.tutorialFinished == true )
             {
                 thanks.text = "Good morning " + playernamestr + " I don't feel too good \n could you get me something to eat?";
+                //add delay
+                GameManager.Instance.showC1CPanel = true;
             }
-            if(GameManager.Instance.marketEventCompleted == true)
+            if (GameManager.Instance.choiceHelpMomFirst == 0) //if helps mom first
+            {
+                thanks.text = "Thank you. That’s really kind of you. Go get some Food.";
+                //update goals
+            }
+            if (GameManager.Instance.marketEventCompleted == true)
             {
                 GameManager.Instance.motherHelped = true;
                 thanks.text = "Thank you " + playernamestr + " for bringing me food \n I feel better already!";
@@ -86,6 +95,18 @@ public class PlayerManager : MonoBehaviour
                     GameManager.Instance.highRed = false;
                     thanks.text = "Thank you " + playernamestr + " for bringing me food \n I dont feel too good, this was way to much sugar!";
                 }
+
+            }
+            if (GameManager.Instance.marketEventCompleted == true && GameManager.Instance.schoolComplete != true)
+            {
+                thanks.text = "Now please go to School!";
+            }
+            //add delay
+            if (GameManager.Instance.marketEventCompleted == true && GameManager.Instance.schoolComplete == true)
+            {
+                GameManager.Instance.chapter1Complete = true;
+                GameManager.Instance.chapterScreenPlayed = false;
+                SceneManager.LoadScene("Chapter2");
             }
         }
 

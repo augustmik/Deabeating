@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Buildings/Village.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Chapter2.unity
+    guid: fc79421dc45680744bdc006a35876661
+  - enabled: 1
     path: Assets/Scenes/Test.unity
     guid: ca5dcfebc9a6a9941a8ccaf0ebe8f995
   - enabled: 1

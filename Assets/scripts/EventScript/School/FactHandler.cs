@@ -38,7 +38,8 @@ public class FactHandler : MonoBehaviour
     public void EndSchoolEvent()
     {
         teacherText.text = "That would be all kids. You are free to go.";
+        GameManager.Instance.schoolComplete = true;
         Debug.Log("Event End");
-        //Hook this to some scene
+        SceneManager.LoadScene("Village");
     }
 }
