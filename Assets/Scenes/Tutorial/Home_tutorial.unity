@@ -742,7 +742,7 @@ MonoBehaviour:
   Nurse: {fileID: 2135501484}
   Mother: {fileID: 2135501484}
   TutorialText: {fileID: 784447714}
-  Message: {fileID: 0}
+  Message: {fileID: 473220160}
   view2: {fileID: 0}
   view3: {fileID: 0}
 --- !u!1 &661982399
@@ -1177,15 +1177,18 @@ MonoBehaviour:
   mTimes: 0
   hTimes: 0
   sTimes: 0
-  marketEventCompleted: 0
-  motherHelped: 0
   leftHome: 0
   backHome: 0
   tutorialFinished: 0
-  test: 0
-  helpMother: 0
-  rushToSchool: 0
-  helpStranger: 0
+  marketEventCompleted: 0
+  schoolComplete: 0
+  chapterScreenPlayed: 0
+  motherHelped: 0
+  choiceHelpMomFirst: -1
+  showC1CPanel: 0
+  chapter1Complete: 0
+  chapter2Complete: 0
+  chapter3Complete: 0
   lowRed: 0
   lowYellow: 0
   lowOrange: 0
@@ -1193,6 +1196,7 @@ MonoBehaviour:
   highRed: 0
   highOrange: 0
   highYellow: 0
+  helpStranger: 0
 --- !u!4 &1008101671
 Transform:
   m_ObjectHideFlags: 0

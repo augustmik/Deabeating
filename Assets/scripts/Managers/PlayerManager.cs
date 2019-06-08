@@ -27,14 +27,14 @@ public class PlayerManager : MonoBehaviour
     public Text thanks;
     public Image villageHealth;
 
-    private void Start()
+    void Start()
     {
         Scene current = SceneManager.GetActiveScene();
         //charScript = GameObject.Find("CharacterCreation");
         if (current.name.ToString() == "Home")
         {
             GameManager.Instance.hTimes++;
-            playername.text = "Welcome home " + playernamestr;
+            //playername.text = "Welcome home " + playernamestr;
 
             if(GameManager.Instance.tutorialFinished == true )
             {
