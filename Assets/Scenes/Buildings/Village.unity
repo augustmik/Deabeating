@@ -1574,7 +1574,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -560, y: -119.43526}
+  m_AnchoredPosition: {x: 7, y: -88}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1742496386
@@ -1651,15 +1651,18 @@ MonoBehaviour:
   mTimes: 0
   hTimes: 0
   sTimes: 0
-  marketEventCompleted: 0
-  motherHelped: 0
   leftHome: 0
   backHome: 0
   tutorialFinished: 0
-  test: 0
-  helpMother: 0
-  rushToSchool: 0
-  helpStranger: 0
+  marketEventCompleted: 0
+  schoolComplete: 0
+  chapterScreenPlayed: 0
+  motherHelped: 0
+  choiceHelpMomFirst: -1
+  showC1CPanel: 0
+  chapter1Complete: 0
+  chapter2Complete: 0
+  chapter3Complete: 0
   lowRed: 0
   lowYellow: 0
   lowOrange: 0
@@ -1667,6 +1670,7 @@ MonoBehaviour:
   highRed: 0
   highOrange: 0
   highYellow: 0
+  helpStranger: 0
 --- !u!4 &1889778929
 Transform:
   m_ObjectHideFlags: 0
