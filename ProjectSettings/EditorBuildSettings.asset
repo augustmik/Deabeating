@@ -51,6 +51,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter2.unity
     guid: fc79421dc45680744bdc006a35876661
   - enabled: 1
+    path: Assets/Scenes/Buildings/Chapter3/HomeC3.unity
+    guid: ab572a6b945affb4ca6c9cc3d0efd4dd
+  - enabled: 1
+    path: Assets/Scenes/Chapter3.unity
+    guid: 779e524194b69a0448839b76afa410d5
+  - enabled: 1
+    path: Assets/Scenes/Buildings/Chapter2/HomeC2.unity
+    guid: e5261d6c5a7024d48b338ac6f8227059
+  - enabled: 1
+    path: Assets/Scenes/Buildings/Chapter2/RoomC2.unity
+    guid: e16b906e2e57242458c44e7317179241
+  - enabled: 1
+    path: Assets/Scenes/Buildings/Chapter3/RoomC3.unity
+    guid: 95cdb98188b9ff1428912613351fa304
+  - enabled: 1
     path: Assets/Scenes/Test.unity
     guid: ca5dcfebc9a6a9941a8ccaf0ebe8f995
   - enabled: 1
@@ -69,7 +84,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/Settings.unity
     guid: 59c08184ec85e79458b10554e319fd51
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/682db669c2fa9974c956b052df679a23
+    path: 
     guid: 682db669c2fa9974c956b052df679a23
   - enabled: 1
     path: Assets/Scenes/Buildings/Boss.unity

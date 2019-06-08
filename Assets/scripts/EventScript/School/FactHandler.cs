@@ -9,24 +9,30 @@ public class FactHandler : MonoBehaviour
     public static FactsRoot allFacts;
     private static int currentFact = 0;
     public Text teacherText;
+    private bool checker;
     void Start()
     {
         var jsonTextFile = Resources.Load<TextAsset>("Facts");
         allFacts = JsonUtility.FromJson<FactsRoot>(jsonTextFile.ToString());
+        if (GameManager.Instance.chapter2Complete == true)
+        {
+            teacherText.text = "Good morning, today we will do a quiz about diabetes.";
+        }
+
         //goalText.text = allFacts.Facts[1].factText;
 
     }
 
-    void Update()
-    {
-        
-    }
     public static FactsRoot CreateFromJSON(string jsonString)
     {
         return JsonUtility.FromJson<FactsRoot>(jsonString);
     }
     public void LoadNextFact()
     {
+        if (GameManager.Instance.chapter2Complete == true)
+        {
+            SceneManager.LoadScene("School_Quiz");
+        }
         try
         {
             teacherText.text = allFacts.Facts[currentFact].factText;
