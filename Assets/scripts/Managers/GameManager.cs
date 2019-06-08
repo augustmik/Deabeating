@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     public int hTimes = 0;
     public int sTimes = 0;
 
+    //Quiz answers
+    public int score = 0;
+
     //Event booleans
     public bool marketEventCompleted = false;
     public bool motherHelped = false;
