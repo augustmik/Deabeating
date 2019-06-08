@@ -31,7 +31,9 @@ public class FactHandler : MonoBehaviour
     {
         if (GameManager.Instance.chapter2Complete == true)
         {
-            SceneManager.LoadScene("School_Quiz");
+            Debug.Log("Load Quiz");
+            checker = true;
+            //SceneManager.LoadScene("School_Quiz");
         }
         try
         {
@@ -46,6 +48,7 @@ public class FactHandler : MonoBehaviour
         teacherText.text = "That would be all kids. You are free to go.";
         GameManager.Instance.schoolComplete = true;
         Debug.Log("Event End");
-        SceneManager.LoadScene("Village");
+        if (checker) { SceneManager.LoadScene("School_Quiz"); }
+        else SceneManager.LoadScene("Village");
     }
 }

@@ -131,7 +131,8 @@ public class Click_handler : MonoBehaviour
             GameManager.Instance.chapterScreenPlayed = true;
         }
 
-        GameManager.Instance.chapter2Complete = true; //change this when there's material
+        //GameManager.Instance.chapter2Complete = true; //change this when there's material
+        //Chapter3();
     }
     public void Chapter3()
     {
