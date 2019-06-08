@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/Settings.unity
     guid: 59c08184ec85e79458b10554e319fd51
   - enabled: 1
+    path: Assets/Scenes/Buildings/School.unity
+    guid: 682db669c2fa9974c956b052df679a23
+  - enabled: 1
     path: Assets/Scenes/Buildings/Boss.unity
     guid: e6689d557d6bd374ea7b9571c55296a0
   - enabled: 1
