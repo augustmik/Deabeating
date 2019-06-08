@@ -13,11 +13,12 @@ public class TutorialScript : MonoBehaviour
     public GameObject back;
 
     private string msg1 = " \n  Hello, \n \n  Don't forget your screening in the hospital today! \n \n  -Nurse";
-    private string msg2 = " Nurse: \n  Hey, you are right on time for the appointment! \n  Please sit down!";
+
+    private string msg2 = "    Nurse: \n  Hey, you are right on time for the appointment! \n  Please sit down!";
     private string msg3 = "    Nurse: \n   Next I will measure your blood sugar. \n  And don’t be afraid. \n It may sting a bit, but it won’t hurt.";
     private string msg4 = "    Nurse: \n   Soon we will see a value. \n    If you haven’t eaten anything for 8 - 10 hours, \n  the normal value is 5,6. \n     So if your value is higher we know you might have diabetes.";
     private string msg5 = "    Nurse: \n   So now we know that you have diabetes.";
-    private string msg6 = "  Mother: \n  How could I have discovered this myself?";
+    private string msg6 = "    Mother: \n  How could I have discovered this myself?";
     private string msg7 = "    Nurse: \n   A few symptoms could be that you have a blurry vision and that you are tired a lot";
     private string msg8 = "    Mother: \n  So this means if my son gets for example blurry vision he has diabetes as well?";
     private string msg9 = "    Nurse: \n   No, this is not always the case.\n  So when something like this happens, \n    always be sure to see a adoctor as soon as possible";
@@ -49,6 +50,7 @@ public class TutorialScript : MonoBehaviour
     private SpriteRenderer renderer;
 
     private List<string> messages;
+    private bool done = false;
     private void Start()
     {
         messages = new List<string>();
@@ -84,13 +86,13 @@ public class TutorialScript : MonoBehaviour
         
         if (SceneManager.GetActiveScene().name == "Home_tutorial")
         {
-        //Debug.Log("home_tut");
-            Message.text = msg1;
-            //Message.text = "asd";
-            TutorialText.text = "asdasd";
-            TutorialText.text = "Hello " + PlayerManager.playernamestr + " welcome to Diabeating, a game where you are going to learn about Diabetes. \n" +
-                                "In the top left you will see your current goal you are trying to accomplish. \n    In the bottom right corner is a button where you can get to the village. \n" +
-                                "Dialogue boxes will display the name of the speaker so you always know who is talking.";
+            if(done == false)
+            {
+                 Message.text = msg1;
+                 TutorialText.text = "Hello " + PlayerManager.playernamestr + "and welcome to Diabeating!\n In this game you are going to learn about Diabetes.\n" +
+                                "In the top left you will see your current goal \nFrom the bottom right button, you will ge to the village \n" +
+                                "Dialogue boxes will display the name of the speaker\n so you always know who is talking.";
+            }
            
         }
 
@@ -181,6 +183,17 @@ public class TutorialScript : MonoBehaviour
         }
     }
 
+    public void NextTutorial()
+    {
+        done = true;
+        TutorialText.fontSize = 30;
+        
+        TutorialText.text = "Now you need to go to the hospital with your mother!\n" +
+                            "Go to the village by clicken the houses on the right";
+
+        Message.text = "Lets go " + PlayerManager.playernamestr;
+
+    }
 
     
     }

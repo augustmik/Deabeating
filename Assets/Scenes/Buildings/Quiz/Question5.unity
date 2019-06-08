@@ -1568,6 +1568,7 @@ MonoBehaviour:
   correctSign: {fileID: 29338743}
   incorrectSign: {fileID: 59335786}
   score: {fileID: 1934397353}
+  panel: {fileID: 1231477915}
 --- !u!1 &1602843249
 GameObject:
   m_ObjectHideFlags: 0
