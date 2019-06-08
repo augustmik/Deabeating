@@ -130,6 +130,9 @@ public class Click_handler : MonoBehaviour
             SceneManager.LoadScene("Chapter2");
             GameManager.Instance.chapterScreenPlayed = true;
         }
+
+        //GameManager.Instance.chapter2Complete = true; //change this when there's material
+        //Chapter3();
     }
     public void Chapter3()
     {
@@ -138,5 +141,23 @@ public class Click_handler : MonoBehaviour
             SceneManager.LoadScene("Chapter3");
             GameManager.Instance.chapterScreenPlayed = true;
         }
+        
+        if (levelName == "Market")
+        {
+            NoAccess.text = "I need to go to School";
+        }
+        else if (levelName == "Home")
+        {
+            NoAccess.text = "I better go to School";
+        }
+        else if (levelName == "Hospital")
+        {
+            NoAccess.text = "I Have no business here.";
+        }
+        else
+        {
+            SceneManager.LoadScene(levelName);
+        }
+        
     }
 }

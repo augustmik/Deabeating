@@ -25,4 +25,13 @@ public class StartGame : MonoBehaviour
     {
         SceneManager.LoadScene("Home");
     }
+    public void GoKitchen2()
+    {
+        GameManager.Instance.chapter2Complete = true;
+        SceneManager.LoadScene("HomeC2");
+    }
+    public void GoKitchen3()
+    {
+        SceneManager.LoadScene("HomeC3");
+    }
 }

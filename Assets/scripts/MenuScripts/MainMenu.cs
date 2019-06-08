@@ -25,5 +25,12 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Room");
     }
- 
+    public void BeginChapter2()
+    {
+        SceneManager.LoadScene("RoomC2");
+    }
+    public void BeginChapter3()
+    {
+        SceneManager.LoadScene("RoomC3");
+    }
 }

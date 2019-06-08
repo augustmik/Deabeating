@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     //Event booleans
     public bool marketEventCompleted = false;
-    public bool schoolComplete = false;   //ToDo
+    public bool schoolComplete = false;
 
     public bool chapterScreenPlayed = false;
 
@@ -45,8 +45,10 @@ public class GameManager : MonoBehaviour
     public bool highOrange = false;
     public bool highYellow = false;
 
-    //LaterChapter
+    //C2
     public bool helpStranger = false;
+
+    //C3
 
 
     private void Awake()
