@@ -86,7 +86,7 @@ public class TutorialScript : MonoBehaviour
         {
         //Debug.Log("home_tut");
             Message.text = msg1;
-            Message.text = "asd";
+            //Message.text = "asd";
             TutorialText.text = "asdasd";
             TutorialText.text = "Hello " + PlayerManager.playernamestr + " welcome to Diabeating, a game where you are going to learn about Diabetes. \n" +
                                 "In the top left you will see your current goal you are trying to accomplish. \n    In the bottom right corner is a button where you can get to the village. \n" +

@@ -21,7 +21,7 @@ public class GoalHandler : MonoBehaviour
     private void Update()
     {
 
-        if (SceneManager.GetActiveScene().name == "Home_tutorial")
+       /* if (SceneManager.GetActiveScene().name == "Home_tutorial")
         {
             if (timer < 5.1f)
             {
@@ -40,7 +40,7 @@ public class GoalHandler : MonoBehaviour
         {
 
             goalText.text = allGoals.Goal[2].goalText;
-        }
+        }*/
         
     }
     public static GoalRoot CreateFromJSON(string jsonString)
