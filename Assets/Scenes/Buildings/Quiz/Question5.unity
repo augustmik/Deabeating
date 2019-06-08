@@ -938,7 +938,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1537791328}
-        m_MethodName: RightAnswer
+        m_MethodName: LoadBossLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
