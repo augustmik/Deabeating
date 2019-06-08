@@ -6,12 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class TutorialScript : MonoBehaviour
 {
-   
-
     public GameObject BG;
     public GameObject panel;
     public GameObject text;
-
+    public GameObject TutorialPanel;
     public GameObject back;
 
     public GameObject GoalBG;
@@ -19,13 +17,13 @@ public class TutorialScript : MonoBehaviour
     public GameObject Nurse;
     public GameObject Mother;
 
+    public Text TutorialText;
     public Text Message;
     public Sprite view2;
     public Sprite view3;
 
     private float timer;
-    private int messageNumber = 0;
-
+  
     private float heightT;
     private float heightP;
 
@@ -74,7 +72,13 @@ public class TutorialScript : MonoBehaviour
         
         if (SceneManager.GetActiveScene().name == "Home_tutorial")
         {
+        Debug.Log("home_tut");
             Message.text = msg1;
+            Message.text = "asd";
+            TutorialText.text = "asdasd";
+            TutorialText.text = "Hello " + PlayerManager.playernamestr + "welcome to Diabeating, a game where you are going to learn about Diabetes. \n" +
+                                "In the top left you will see your current goal you are trying to accomplish. \n    In the bottom right corner is a button where you can get to the village. \n" +
+                                "Dialogue boxes will display the name of the speaker so you always know who is talking.";
            
         }
 

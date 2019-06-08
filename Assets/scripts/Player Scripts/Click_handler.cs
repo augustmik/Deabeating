@@ -20,10 +20,6 @@ public class Click_handler : MonoBehaviour
     {
         timer += Time.deltaTime;
     }
-
-
-
-
     private void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0))
