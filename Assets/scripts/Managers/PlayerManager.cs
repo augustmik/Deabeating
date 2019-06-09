@@ -49,11 +49,13 @@ public class PlayerManager : MonoBehaviour
             if (GameManager.Instance.marketEventCompleted == true)
             {
                 GameManager.Instance.motherHelped = true;
+                GameManager.Instance.goalDone = true;
                 thanks.text = "Thank you " + playernamestr + " for bringing me food \n I feel better already!";
 
                 if(GameManager.Instance.lowRed == true)
                 {
                     GameManager.Instance.motherHelped = false;
+                    GameManager.Instance.C1SpecGoal = true;
                     GameManager.Instance.marketEventCompleted = false;
                     GameManager.Instance.lowRed = false;
                     thanks.text = "Thank you " + playernamestr + " for bringing me food \n but I am still feeling really tired \n maybe you could fetch me some more food";
@@ -110,7 +112,12 @@ public class PlayerManager : MonoBehaviour
                     GameManager.Instance.chapter2Complete = true;
                     SceneManager.LoadScene("Chapter3");
 
-                }else SceneManager.LoadScene("Chapter2");
+                }
+                else
+                {
+                    GameManager.Instance.goalNumber = 13;       //adjust for chapter 2, no help mom goals tho at start
+                    SceneManager.LoadScene("Chapter2");
+                }
             }
         }
 

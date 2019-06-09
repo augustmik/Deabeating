@@ -1,27 +1,29 @@
 {
 "Goal":[
-	{"goalText":"Find Mother.", "isComplete":false},
+	{"goalText":"Follow the tutorial.", "isComplete":false},
 	{"goalText":"Go to the Hospital.", "isComplete":false},
+	{"goalText":"Go back Home.", "isComplete":false},
 	{"goalText":"Go back Home.", "isComplete":false},
 	
 	{"goalText":"Rush to school.", "isComplete":false},
-	
-	{"goalText":"Help mom.", "isComplete":false},
+	{"goalText":"Go to the Supermarket.", "isComplete":false},
+	{"goalText":"Return to Mom.", "isComplete":false},
+
 	{"goalText":"Go to the Supermarket.", "isComplete":false, "tracker":-1},
-	{"goalText":"Go back Home.", "isComplete":false},
-	
+	{"goalText":"Return to Mom.", "isComplete":false},
 	{"goalText":"Go to School.", "isComplete":false},
-	{"goalText":"Learn about Diabetes.", "isComplete":false},
 	
 	{"goalText":"Go back to the Supermarket.", "isComplete":false},
+	{"goalText":"Return to Mom.", "isComplete":false},
+
 	
 	{"goalText":"Check on Mother.", "isComplete":false},
 	{"goalText":"Get water for Mother.", "isComplete":false},
 	
 	{"goalText":"Find the Nurse.", "isComplete":false},
-	{"goalText":"Return to Stranger.", "isComplete":false},
-	{"goalText":"Return to Mother.", "isComplete":false},
-	
+	{"goalText":"Buy Water & something Sweet.", "isComplete":false},
+	{"goalText":"Bring Water to Mom.", "isComplete":false},
+
 	{"goalText":"Go to School.", "isComplete":false},
 	{"goalText":"Score 75% on the quiz", "isComplete":false},
 	

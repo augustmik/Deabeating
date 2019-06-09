@@ -254,7 +254,7 @@ public class CartScript : MonoBehaviour
             if(returns == 3)
             {
                returnText.text = "Go home to give items to mommy";
-               GameManager.Instance.marketEventCompleted = true;
+                    GameManager.Instance.marketEventCompleted = true;
 
 
                     if(arrowPos.x > -970 - 460f && arrowPos.x < -940 - 460f)
@@ -351,7 +351,7 @@ public class CartScript : MonoBehaviour
             GameManager.Instance.highRed = true;
            
         }
-
+        GameManager.Instance.goalDone = true;
         GameManager.Instance.marketEventCompleted = true;
         returnText.text = "YOU CAN GO HOME NOW";
     }
@@ -365,6 +365,7 @@ public class CartScript : MonoBehaviour
     public void C2EndEvent()
     {
         GameManager.Instance.gotWater = true;
+        GameManager.Instance.goalDone = true;
         SceneManager.LoadScene("Well");
     }
 

@@ -100,12 +100,12 @@ public class TutorialScript : MonoBehaviour
         {
          
            timer += Time.deltaTime;
-            if (timer > 0f && timer < 3f)
+            if (timer > 1f)//0f && timer < 3f)
             {
                 Message.text = msg2;
             }
 
-            if (timer > 3f && timer < 7f)
+            if (timer > 1f)//3f && timer < 7f)
             {
                 Nurse.transform.localScale = new Vector3(111, 111, 0);
                 Nurse.transform.SetPositionAndRotation(view2Pos, rot);
@@ -115,7 +115,7 @@ public class TutorialScript : MonoBehaviour
                 Message.text = msg3;
             }
 
-            if (timer > 7f)
+            if (timer > 1f)//7f)
             {
                 Nurse.transform.SetPositionAndRotation(new Vector3(0, 1000, 0), rot);
                 renderer.sprite = view3;
@@ -126,14 +126,14 @@ public class TutorialScript : MonoBehaviour
             }
 
 
-            if (timer > 10f)
+            if (timer > 1f)//10f)
             {
                 renderer.sprite = view2;
                 Nurse.transform.SetPositionAndRotation(view2Pos, rot);
                 Message.text = msg5;
             }
 
-            if (timer > 15f)
+            if (timer > 1f)//15f)
             {
                 rectP.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightP-80f);
                 rectT.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightT-80f);
@@ -142,35 +142,35 @@ public class TutorialScript : MonoBehaviour
                 Message.text = msg6;
             }
 
-            if (timer > 20f)
+            if (timer > 1f)//20f)
             {
                 rectP.SetPositionAndRotation(panelorgPos, rot);
                 rectT.SetPositionAndRotation(panelorgPos, rot);
                 Message.text = msg7;
             }
 
-            if (timer > 25f)
+            if (timer > 1f)//25f)
             {
                 rectP.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
                 rectT.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
                 Message.text = msg8;
             }
 
-            if (timer > 30f)
+            if (timer > 1f)//30f)
             {
                 rectP.SetPositionAndRotation(panelorgPos, rot);
                 rectT.SetPositionAndRotation(panelorgPos, rot);
                 Message.text = msg9;
             }
 
-            if (timer > 35f)
+            if (timer > 1f)//35f)
             {
                 rectP.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
                 rectT.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
                 Message.text = msg10;
             }
 
-            if (timer > 40f)
+            if (timer > 1f)//40f)
             {
                 rectP.SetPositionAndRotation(panelorgPos, rot);
                 rectT.SetPositionAndRotation(panelorgPos, rot);
@@ -178,6 +178,7 @@ public class TutorialScript : MonoBehaviour
                 GoalBG.transform.SetPositionAndRotation(new Vector3(920, 600, 0), rot);
                 Message.text = "    Nurse: \n You're welcome! ";
                 GameManager.Instance.tutorialFinished = true;
+                GameManager.Instance.goalDone = true;
             }
 
         }
@@ -187,7 +188,7 @@ public class TutorialScript : MonoBehaviour
     {
         done = true;
         TutorialText.fontSize = 30;
-        
+        GameManager.Instance.goalDone = true;
         TutorialText.text = "Now you need to go to the hospital with your mother!\n" +
                             "Go to the village by clicken the houses on the right";
 

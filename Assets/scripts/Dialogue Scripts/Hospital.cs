@@ -22,7 +22,7 @@ public class Hospital : MonoBehaviour
         startDialog.AddLast("Nurse: \n I could come with you and measure his blood sugar.");
         startDialog.AddLast("Player: \n Thanks. I still have to buy water for my mother. After the screening of the well digger I could go to the supermarket for both.");
         startDialog.AddLast("Nurse: \n Okay let’s go.");
-        
+        GameManager.Instance.goalDone = true;
         //second choice here
         //update goals
 

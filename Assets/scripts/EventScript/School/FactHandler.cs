@@ -18,8 +18,7 @@ public class FactHandler : MonoBehaviour
         {
             teacherText.text = "Good morning, today we will do a quiz about diabetes.";
         }
-
-        //goalText.text = allFacts.Facts[1].factText;
+        //else 
 
     }
 
@@ -31,7 +30,7 @@ public class FactHandler : MonoBehaviour
     {
         if (GameManager.Instance.chapter2Complete == true)
         {
-            Debug.Log("Load Quiz");
+            //Debug.Log("Load Quiz");
             checker = true;
             //SceneManager.LoadScene("School_Quiz");
         }
@@ -46,8 +45,19 @@ public class FactHandler : MonoBehaviour
     public void EndSchoolEvent()
     {
         teacherText.text = "That would be all kids. You are free to go.";
-        GameManager.Instance.schoolComplete = true;
-        Debug.Log("Event End");
+        if (GameManager.Instance.schoolComplete == true) { EndSchoolRude(); }
+        else
+        {
+            GameManager.Instance.schoolComplete = true;
+            GameManager.Instance.goalDone = true;
+            Debug.Log("School End Normal");
+            if (checker) { SceneManager.LoadScene("School_Quiz"); }
+            else SceneManager.LoadScene("Village");
+        }
+    }
+    public void EndSchoolRude()
+    {
+        teacherText.text = "That would be all kids. You are free to go.";
         if (checker) { SceneManager.LoadScene("School_Quiz"); }
         else SceneManager.LoadScene("Village");
     }
