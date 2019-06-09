@@ -39,14 +39,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Buildings/Quiz/Question3.unity
     guid: 751758fdf19df58409fb13556a836baf
   - enabled: 1
-    path: Assets/Scenes/Buildings/School.unity
-    guid: 2cdaa8b50aebc9b4e96fabfe16e469d1
-  - enabled: 1
     path: Assets/Scenes/Buildings/Quiz/Question4.unity
     guid: b9dd0c39b8de6c24f81e8bc7ce139e03
   - enabled: 1
     path: Assets/Scenes/Buildings/Quiz/Question5.unity
     guid: 721a411f43d7e12488b74847a3380863
+  - enabled: 1
+    path: Assets/Scenes/Buildings/School.unity
+    guid: 2cdaa8b50aebc9b4e96fabfe16e469d1
   - enabled: 1
     path: Assets/Scenes/Buildings/Village.unity
     guid: 2cda990e2423bbf4892e6590ba056729
@@ -88,7 +88,7 @@ EditorBuildSettings:
     guid: 59c08184ec85e79458b10554e319fd51
   - enabled: 0
     path: 
-    guid: 682db669c2fa9974c956b052df679a23
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Buildings/Boss.unity
     guid: e6689d557d6bd374ea7b9571c55296a0

@@ -22,7 +22,7 @@ public class TutorialScript : MonoBehaviour
     private string msg7 = "    Nurse: \n   A few symptoms could be that you have a blurry vision and that you are tired a lot";
     private string msg8 = "    Mother: \n  So this means if my son gets for example blurry vision he has diabetes as well?";
     private string msg9 = "    Nurse: \n   No, this is not always the case.\n  So when something like this happens, \n    always be sure to see a adoctor as soon as possible";
-    private string msg10 = "    Mother: \n  Thank you for your help! ";
+    private string msg10 = "   Mother: \n  Thank you for your help! ";
 
     public GameObject GoalBG;
 
@@ -170,7 +170,7 @@ public class TutorialScript : MonoBehaviour
                 Message.text = msg10;
             }
 
-            if (timer > 40f)
+            if (timer > 1f)
             {
                 rectP.SetPositionAndRotation(panelorgPos, rot);
                 rectT.SetPositionAndRotation(panelorgPos, rot);
@@ -191,7 +191,7 @@ public class TutorialScript : MonoBehaviour
         TutorialText.text = "Now you need to go to the hospital with your mother!\n" +
                             "Go to the village by clicken the houses on the right";
 
-        Message.text = "Lets go " + PlayerManager.playernamestr;
+        Message.text = "Mother: \n Lets go to the hospital " + PlayerManager.playernamestr;
 
     }
 
