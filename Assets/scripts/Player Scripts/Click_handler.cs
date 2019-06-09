@@ -127,18 +127,31 @@ public class Click_handler : MonoBehaviour
     {
         if (GameManager.Instance.chapterScreenPlayed == false)
         {
-            SceneManager.LoadScene("Chapter2");
+            //SceneManager.LoadScene("Chapter2");
             GameManager.Instance.chapterScreenPlayed = true;
         }
-
-        //GameManager.Instance.chapter2Complete = true; //change this when there's material
-        //Chapter3();
+        if (levelName == "Home" && GameManager.Instance.gotWater == false)
+        {
+            NoAccess.text = "I need to get my mom water before returning home";
+        }
+        else if (levelName == "School")
+        {
+            NoAccess.text = "I have no business here.";
+        }
+        else if (levelName == "Market" && GameManager.Instance.secCheckStranger == false)
+        {
+            NoAccess.text = "I think I should see the Nurse first";
+        }
+        else
+        {
+            SceneManager.LoadScene(levelName);
+        }
     }
     public void Chapter3()
     {
         if (GameManager.Instance.chapterScreenPlayed == false)
         {
-            SceneManager.LoadScene("Chapter3");
+            //SceneManager.LoadScene("Chapter3");
             GameManager.Instance.chapterScreenPlayed = true;
         }
         

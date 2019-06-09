@@ -239,6 +239,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &34598965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34598962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff43a744e6fb1b49a36e3e081fa8f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  momWords: {fileID: 20665521}
 --- !u!1 &249219958
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,7 +638,6 @@ GameObject:
   - component: {fileID: 1258341568}
   - component: {fileID: 1258341567}
   - component: {fileID: 1258341566}
-  - component: {fileID: 1258341565}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -633,21 +645,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1258341565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258341563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1a8027a1f02c0e4b9c4f08db37b7f92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playername: {fileID: 0}
-  thanks: {fileID: 0}
-  villageHealth: {fileID: 0}
 --- !u!81 &1258341566
 AudioListener:
   m_ObjectHideFlags: 0
@@ -789,7 +786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clickable: {fileID: 2022230198}
-  levelName: Village
+  levelName: Well
   NoAccess: {fileID: 0}
 --- !u!212 &2022230202
 SpriteRenderer:
@@ -926,11 +923,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -3471926617046923872, guid: d8ee677e1a3340642b2d3a1fd1304504,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2152039301920048743, guid: d8ee677e1a3340642b2d3a1fd1304504,
         type: 3}
       propertyPath: m_Sprite
@@ -945,6 +937,11 @@ PrefabInstance:
     - target: {fileID: 2152039301920048743, guid: d8ee677e1a3340642b2d3a1fd1304504,
         type: 3}
       propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3471926617046923872, guid: d8ee677e1a3340642b2d3a1fd1304504,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:

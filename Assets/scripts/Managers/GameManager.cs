@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     //first letter of the scene
+    public string playerName;
     public int mTimes = 0;
     public int hTimes = 0;  //Debug reasons
     public int sTimes = 0;
@@ -49,6 +50,11 @@ public class GameManager : MonoBehaviour
 
     //C2
     public bool helpStranger = false;
+
+    public bool firstCheckStranger = true;
+    public bool secCheckStranger = false;
+    public bool seenNurse = false;
+    public bool gotWater = false;
 
     //C3
 

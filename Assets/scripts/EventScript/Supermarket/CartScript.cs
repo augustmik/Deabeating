@@ -52,6 +52,7 @@ public class CartScript : MonoBehaviour
 
     private void Start()
     {
+        if (GameManager.Instance.secCheckStranger) { C2EndEvent(); } //Check hook, this works, now it just skips the event
         testg = GetComponent<Graphic>();
         arrowPos = arrow.transform.position;
         quat = arrow.transform.rotation;
@@ -359,6 +360,13 @@ public class CartScript : MonoBehaviour
     {
         SceneManager.LoadScene("Village");
     }
-  
+
+    //Event is accessible when GameManager.Instance.secCheckStranger == true, need water for mom and something sweet for welldigger
+    public void C2EndEvent()
+    {
+        GameManager.Instance.gotWater = true;
+        SceneManager.LoadScene("Well");
+    }
+
 
 }
