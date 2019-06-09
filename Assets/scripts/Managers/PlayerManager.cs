@@ -30,6 +30,7 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         Scene current = SceneManager.GetActiveScene();
+        GameManager.Instance.playerName = playernamestr;
         //charScript = GameObject.Find("CharacterCreation");
         if (current.name.ToString() == "Home")
         {
@@ -104,7 +105,12 @@ public class PlayerManager : MonoBehaviour
             {
                 GameManager.Instance.chapter1Complete = true;
                 GameManager.Instance.chapterScreenPlayed = false;
-                SceneManager.LoadScene("Chapter2");
+                if (GameManager.Instance.gotWater)
+                {
+                    GameManager.Instance.chapter2Complete = true;
+                    SceneManager.LoadScene("Chapter3");
+
+                }else SceneManager.LoadScene("Chapter2");
             }
         }
 

@@ -126,6 +126,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1014261727}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &53946063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53946062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc06052d3002fe8419357cd91af918f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &53946066
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -152,21 +164,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 8}
   m_EdgeRadius: 0
---- !u!114 &53946067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53946062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ff0aa233d94ce42a4216690568c992, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Clickable: {fileID: 53946062}
-  levelName: Test
-  NoAccess: {fileID: 1742496386}
 --- !u!1 &205101482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,7 +1098,7 @@ PrefabInstance:
     - target: {fileID: 2152039301920048740, guid: d8ee677e1a3340642b2d3a1fd1304504,
         type: 3}
       propertyPath: m_Name
-      value: Nurse
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2152039301920048740, guid: d8ee677e1a3340642b2d3a1fd1304504,
         type: 3}
@@ -1648,9 +1645,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2751fad103d3de4b9ca05c8ad89a31f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: 
   mTimes: 0
   hTimes: 0
   sTimes: 0
+  Score: 0
   leftHome: 0
   backHome: 0
   tutorialFinished: 0
@@ -1671,6 +1670,10 @@ MonoBehaviour:
   highOrange: 0
   highYellow: 0
   helpStranger: 0
+  firstCheckStranger: 1
+  secCheckStranger: 0
+  seenNurse: 0
+  gotWater: 0
 --- !u!4 &1889778929
 Transform:
   m_ObjectHideFlags: 0

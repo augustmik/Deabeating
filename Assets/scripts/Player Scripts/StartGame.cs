@@ -27,7 +27,7 @@ public class StartGame : MonoBehaviour
     }
     public void GoKitchen2()
     {
-        GameManager.Instance.chapter2Complete = true;
+        //GameManager.Instance.chapter2Complete = true;
         SceneManager.LoadScene("HomeC2");
     }
     public void GoKitchen3()
