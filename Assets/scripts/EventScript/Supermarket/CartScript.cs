@@ -142,7 +142,8 @@ public class CartScript : MonoBehaviour
         if(foods.Contains(water) && foods.Contains(honey) && foods.Contains(coke))
         {
         GameManager.Instance.gotWater = true;
-        SceneManager.LoadScene("Well");
+            GameManager.Instance.goalDone = true;
+            SceneManager.LoadScene("Well");
         }
     }
 
@@ -406,18 +407,4 @@ public class CartScript : MonoBehaviour
         GameManager.Instance.marketEventCompleted = true;
         returnText.text = "YOU CAN GO HOME NOW";
     }
-
-    public void BacktoVillage()
-    {
-        SceneManager.LoadScene("Village");
-    }
-
-    //Event is accessible when GameManager.Instance.secCheckStranger == true, need water for mom and something sweet for welldigger
-    public void C2EndEvent()
-    {
-        GameManager.Instance.gotWater = true;
-        GameManager.Instance.goalDone = true;
-        SceneManager.LoadScene("Well");
-    }
-
 }
