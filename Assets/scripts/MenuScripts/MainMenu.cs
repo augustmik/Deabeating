@@ -23,14 +23,17 @@ public class MainMenu : MonoBehaviour
 
     public void BeginChapter()
     {
+        GameManager.Instance.goalDone = true;
         SceneManager.LoadScene("Room");
     }
     public void BeginChapter2()
     {
+        GameManager.Instance.goalDone = true;
         SceneManager.LoadScene("RoomC2");
     }
     public void BeginChapter3()
     {
+        GameManager.Instance.goalDone = true;
         SceneManager.LoadScene("RoomC3");
     }
 }

@@ -1385,9 +1385,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2751fad103d3de4b9ca05c8ad89a31f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: 
+  goalNumber: -1
+  skipped: 0
+  goalCounter: 0
+  goalDone: 1
   mTimes: 0
   hTimes: 0
   sTimes: 0
+  Score: 0
   leftHome: 0
   backHome: 0
   tutorialFinished: 0
@@ -1408,6 +1414,10 @@ MonoBehaviour:
   highOrange: 0
   highYellow: 0
   helpStranger: 0
+  firstCheckStranger: 1
+  secCheckStranger: 0
+  seenNurse: 0
+  gotWater: 0
 --- !u!4 &1008101671
 Transform:
   m_ObjectHideFlags: 0

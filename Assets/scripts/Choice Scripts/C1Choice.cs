@@ -18,7 +18,7 @@ public class C1Choice : MonoBehaviour
         }
 
     }
-    public void Chapter1Choice(int choice) //if help mom First then true
+    public void Chapter1Choice(int choice) //if help mom First then 0
     {
         //Debug.Log(choice);
         GameManager.Instance.choiceHelpMomFirst = choice;
