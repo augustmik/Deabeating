@@ -342,6 +342,7 @@ public class CartScript : MonoBehaviour
 
             if (foods.Count == cartSize)
             {
+               returnText.text = "Go home to give items to mommy";
                 cartText.text = "Your cart is full";
                 if (returns == 3)
                 {
@@ -395,10 +396,28 @@ public class CartScript : MonoBehaviour
             sugar.text = "Sugarlevel: " + sugarlevel.ToString();
         }
 
-        /*else if (GameManager.Instance.mTimes != 1 && GameManager.Instance.marketEventCompleted == true)
+        else if (GameManager.Instance.mTimes != 1 && GameManager.Instance.marketEventCompleted == true)
         {
+            GameManager.Instance.highRed = true;
             returnText.text = "YOU HAVE NO BUSINESS HERES";
-        }*/
+
+        }
+        GameManager.Instance.goalDone = true;
+        GameManager.Instance.marketEventCompleted = true;
+        returnText.text = "YOU CAN GO HOME NOW";
+    }
+
+    public void BacktoVillage()
+    {
+        SceneManager.LoadScene("Village");
+    }
+
+    //Event is accessible when GameManager.Instance.secCheckStranger == true, need water for mom and something sweet for welldigger
+    public void C2EndEvent()
+    {
+        GameManager.Instance.gotWater = true;
+        GameManager.Instance.goalDone = true;
+        SceneManager.LoadScene("Well");
     }
 
 }

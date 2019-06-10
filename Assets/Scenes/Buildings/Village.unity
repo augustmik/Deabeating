@@ -1102,6 +1102,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2152039301920048740, guid: d8ee677e1a3340642b2d3a1fd1304504,
         type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152039301920048740, guid: d8ee677e1a3340642b2d3a1fd1304504,
+        type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
@@ -1283,7 +1288,7 @@ GameObject:
   - component: {fileID: 1277794943}
   m_Layer: 5
   m_Name: GoalsText
-  m_TagString: Untagged
+  m_TagString: GoalPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1752,7 +1757,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0
+  m_FillAmount: 0.05
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0

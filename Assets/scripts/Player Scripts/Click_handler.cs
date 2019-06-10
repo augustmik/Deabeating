@@ -63,6 +63,7 @@ public class Click_handler : MonoBehaviour
         if (GameManager.Instance.leftHome == false && levelName == "Hospital")//SceneManager.GetActiveScene().name == "Home_tutorial")
         {
             GameManager.Instance.leftHome = true;
+            GameManager.Instance.goalDone = true;
             SceneManager.LoadScene("Hospital_tutorial");
         }
 

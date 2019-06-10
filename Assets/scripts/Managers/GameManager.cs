@@ -10,6 +10,13 @@ public class GameManager : MonoBehaviour
 
     //first letter of the scene
     public string playerName;
+    public int goalNumber = -1;
+    public bool C1SpecGoal = false;
+    public bool C1SpecGoal2 = false;
+    public bool skipped = false;
+    public int goalCounter = 0;
+    public bool goalDone = true;
+
     public int mTimes = 0;
     public int hTimes = 0;  //Debug reasons
     public int sTimes = 0;
