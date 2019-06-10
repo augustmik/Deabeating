@@ -111,13 +111,13 @@ public class PlayerManager : MonoBehaviour
                 {
                     GameManager.Instance.chapter2Complete = true;
                     SceneManager.LoadScene("Chapter3");
-
                 }
                 else
                 {
                     GameManager.Instance.goalNumber = 13;       //adjust for chapter 2, no help mom goals tho at start
                     SceneManager.LoadScene("Chapter2");
                 }
+
             }
         }
 

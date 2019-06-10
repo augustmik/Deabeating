@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Buildings/Well.unity
     guid: 5d751a75f287cb740b7a94821574bf8b
   - enabled: 1
+    path: Assets/Scenes/Buildings/Well.unity
+    guid: 5d751a75f287cb740b7a94821574bf8b
+  - enabled: 1
     path: Assets/Scenes/Chapter1.unity
     guid: f2ebdf10783e6f84290036178d5a9abc
   - enabled: 1
@@ -88,7 +91,7 @@ EditorBuildSettings:
     guid: 59c08184ec85e79458b10554e319fd51
   - enabled: 0
     path: 
-    guid: 682db669c2fa9974c956b052df679a23
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Buildings/Boss.unity
     guid: e6689d557d6bd374ea7b9571c55296a0
