@@ -5,13 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class Goal
 {
-    // Start is called before the first frame update
     public string goalText;
-    //public string goal2;
-    //public int reward;
+    public bool isComplete;
+    public int tracker;
 
-    /*public static Goal CreateFromJSON(string jsonString)
-    {
-        return JsonUtility.FromJson<Goal>(jsonString);
-    }*/
 }

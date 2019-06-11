@@ -28,6 +28,7 @@ public class ItemScript : MonoBehaviour
 
     private void Awake()
     {
+        
         quat = item.transform.rotation;
         orgPos = item.transform.position;
     }
@@ -120,6 +121,11 @@ public class ItemScript : MonoBehaviour
                 inCart = false;
                 cart.Remove(item);
                 item.transform.SetPositionAndRotation(orgPos, quat);
+
+                if(returnS == 3)
+                {
+                    // playsounds error
+                }
             }
         }
     }

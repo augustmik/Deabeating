@@ -7,6 +7,8 @@ public class PlayerManager : MonoBehaviour
 {
 
     private static PlayerManager _instance;
+    //private GameObject gameManager;
+
     public static PlayerManager Instance
     {
         get
@@ -25,27 +27,35 @@ public class PlayerManager : MonoBehaviour
     public Text thanks;
     public Image villageHealth;
 
-    private void Start()
+    void Start()
     {
         Scene current = SceneManager.GetActiveScene();
-     
+        GameManager.Instance.playerName = playernamestr;
+        //charScript = GameObject.Find("CharacterCreation");
         if (current.name.ToString() == "Home")
         {
-            GameManager.Instance.hTimes++;
-            playername.text = "Welcome home " + playernamestr;
-
-            if(GameManager.Instance.hTimes < 2)
+            
+            if(GameManager.Instance.tutorialFinished == true )
             {
                 thanks.text = "Good morning " + playernamestr + " I don't feel too good \n could you get me something to eat?";
+                //add delay
+                GameManager.Instance.showC1CPanel = true;
             }
-            if(GameManager.Instance.marketEventCompleted == true)
+            if (GameManager.Instance.choiceHelpMomFirst == 0) //if helps mom first
+            {
+                thanks.text = "Thank you. That’s really kind of you. Go get some Food.";
+                //update goals
+            }
+            if (GameManager.Instance.marketEventCompleted == true)
             {
                 GameManager.Instance.motherHelped = true;
+                GameManager.Instance.goalDone = true;
                 thanks.text = "Thank you " + playernamestr + " for bringing me food \n I feel better already!";
 
                 if(GameManager.Instance.lowRed == true)
                 {
                     GameManager.Instance.motherHelped = false;
+                    GameManager.Instance.C1SpecGoal = true;
                     GameManager.Instance.marketEventCompleted = false;
                     GameManager.Instance.lowRed = false;
                     thanks.text = "Thank you " + playernamestr + " for bringing me food \n but I am still feeling really tired \n maybe you could fetch me some more food";
@@ -86,6 +96,28 @@ public class PlayerManager : MonoBehaviour
                     GameManager.Instance.highRed = false;
                     thanks.text = "Thank you " + playernamestr + " for bringing me food \n I dont feel too good, this was way to much sugar!";
                 }
+
+            }
+            if (GameManager.Instance.marketEventCompleted == true && GameManager.Instance.schoolComplete != true)
+            {
+                thanks.text = "Now please go to School!";
+            }
+            //add delay
+            if (GameManager.Instance.marketEventCompleted == true && GameManager.Instance.schoolComplete == true)
+            {
+                GameManager.Instance.chapter1Complete = true;
+                GameManager.Instance.chapterScreenPlayed = false;
+                if (GameManager.Instance.gotWater)
+                {
+                    GameManager.Instance.chapter2Complete = true;
+                    SceneManager.LoadScene("Chapter3");
+                }
+                else
+                {
+                    GameManager.Instance.goalNumber = 13;       //adjust for chapter 2, no help mom goals tho at start
+                    SceneManager.LoadScene("Chapter2");
+                }
+
             }
         }
 
@@ -102,6 +134,8 @@ public class PlayerManager : MonoBehaviour
                 villageHealth.fillAmount += 0.25f;
             }
         }
+
+        
     }
 
   
