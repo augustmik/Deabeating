@@ -13,13 +13,17 @@ public class MarketTutorial : MonoBehaviour
 
     private void Awake()
     {
+        if(GameManager.Instance.secCheckStranger == false)
+        {
      
-        panel1.SetActive(true);
-        panel2.SetActive(false);
-        panel3.SetActive(false);
+            panel1.SetActive(true);
+            panel2.SetActive(false);
+            panel3.SetActive(false);
 
-        next.gameObject.SetActive(true);
-        OK.gameObject.SetActive(false);
+            next.gameObject.SetActive(true);
+            OK.gameObject.SetActive(false);
+
+        }
        
     }
 

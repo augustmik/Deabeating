@@ -36,7 +36,7 @@ public class ItemScript : MonoBehaviour
 
     private void Update()
     {
-        if(GameManager.Instance.marketEventCompleted == false)
+        if(GameManager.Instance.marketEventCompleted == false || GameManager.Instance.secCheckStranger == true)
         {
 
             CartScript cscript = item.transform.parent.GetComponent<CartScript>();
@@ -107,7 +107,7 @@ public class ItemScript : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if(GameManager.Instance.marketEventCompleted == false)
+        if(GameManager.Instance.marketEventCompleted == false || GameManager.Instance.secCheckStranger  == true)
         {
             if(Input.GetMouseButtonDown(0) && inCart == false && cart.Count <= cSize-1)
             {
