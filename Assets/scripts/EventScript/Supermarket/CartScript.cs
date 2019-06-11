@@ -51,7 +51,13 @@ public class CartScript : MonoBehaviour
 
     private void Start()
     {
-        if (GameManager.Instance.secCheckStranger) { C2EndEvent(); } //Check hook, this works, now it just skips the event
+        if (GameManager.Instance.secCheckStranger)
+        {
+            GameManager.Instance.gotWater = true;
+            GameManager.Instance.goalDone = true;    //did it here for now
+            SceneManager.LoadScene("Well"); 
+            /*C2EndEvent();*/
+        } //Check hook, this works, now it just skips the event
         arrowPos = arrow.transform.position;
         quat = arrow.transform.rotation;
         sugarLevel.fillAmount = 0;
@@ -107,7 +113,7 @@ public class CartScript : MonoBehaviour
             GameManager.Instance.highRed = true;
            
         }
-
+        GameManager.Instance.goalDone = true;
         GameManager.Instance.marketEventCompleted = true;
         returnText.text = "YOU CAN GO HOME NOW";
     }
@@ -403,8 +409,8 @@ public class CartScript : MonoBehaviour
             returnText.text = "YOU HAVE NO BUSINESS HERES";
 
         }
-        GameManager.Instance.goalDone = true;
+        /*GameManager.Instance.goalDone = true;
         GameManager.Instance.marketEventCompleted = true;
-        returnText.text = "YOU CAN GO HOME NOW";
+        returnText.text = "YOU CAN GO HOME NOW";*/
     }
 }
