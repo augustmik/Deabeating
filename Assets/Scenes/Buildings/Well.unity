@@ -215,6 +215,7 @@ MonoBehaviour:
   diggerWords: {fileID: 1989162394}
   dialogWaitTime: 1
   nurse: {fileID: 1485619134}
+  villageArrow: {fileID: 283344809}
 --- !u!1 &283344809
 GameObject:
   m_ObjectHideFlags: 0

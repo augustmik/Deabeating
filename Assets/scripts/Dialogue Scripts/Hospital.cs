@@ -10,12 +10,14 @@ public class Hospital : MonoBehaviour
     private float timer = 0.0f;
     public float dialogWaitTime;
     public GameObject nurse;
+    public GameObject villageArrow;
     private LinkedList<string> startDialog;
     private LinkedListNode<string> listNode;
 
     void Start()
     {
         startDialog = new LinkedList<string>();
+        villageArrow.SetActive(false);
         if (GameManager.Instance.seenNurse != true)
         {
             startDialog.AddLast("Player: \n Hello, I need your help!");
@@ -30,6 +32,7 @@ public class Hospital : MonoBehaviour
         else
         {
             nurse.SetActive(false);
+            villageArrow.SetActive(true);
             startDialog.AddLast("Player: \n The Nurse must be with the Welldigger.");
         }
 
@@ -50,7 +53,10 @@ public class Hospital : MonoBehaviour
                     nurseWords.text = listNode.Value;
                     listNode = listNode.Next;
                 }
-                catch (System.NullReferenceException) { GameManager.Instance.seenNurse = true; SceneManager.LoadScene("Well"); }
+                catch (System.NullReferenceException) {
+                    GameManager.Instance.seenNurse = true;
+                    SceneManager.LoadScene("Well");
+                }
                 finally { timer -= dialogWaitTime; }
 
 
