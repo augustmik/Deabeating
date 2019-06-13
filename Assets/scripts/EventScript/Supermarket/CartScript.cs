@@ -126,31 +126,12 @@ public class CartScript : MonoBehaviour
     //Event is accessible when GameManager.Instance.secCheckStranger == true, need water for mom and something sweet for welldigger
     public void C2EndEvent()
     {
-        GameObject banana = GameObject.Find("Banana");
-        GameObject coke = GameObject.Find("Coke");
-        GameObject chips = GameObject.Find("Chips");
-        GameObject apple = GameObject.Find("Apple");
-        GameObject water = GameObject.Find("Water");
-        GameObject beer = GameObject.Find("Beer");
-        GameObject honey = GameObject.Find("Honey");
-        GameObject orange = GameObject.Find("Orange");
-
-        ItemScript bananaS = banana.GetComponent<ItemScript>();
-        ItemScript cokeS = coke.GetComponent<ItemScript>();
-        ItemScript chipsS = chips.GetComponent<ItemScript>();
-        ItemScript appleS = apple.GetComponent<ItemScript>();
-        ItemScript waterS = water.GetComponent<ItemScript>();
-        ItemScript beerS = beer.GetComponent<ItemScript>();
-        ItemScript honeyS = honey.GetComponent<ItemScript>();
-        ItemScript orangeS = orange.GetComponent<ItemScript>();
-
-        marketHandler();
-        if(foods.Contains(water) && foods.Contains(honey) && foods.Contains(coke))
-        {
+      
+       //marketHandler();
         GameManager.Instance.gotWater = true;
             GameManager.Instance.goalDone = true;
             SceneManager.LoadScene("Well");
-        }
+        //}
     }
 
     public void marketHandler()
@@ -349,7 +330,8 @@ public class CartScript : MonoBehaviour
 
             if (foods.Count == cartSize)
             {
-               returnText.text = "Go home to give items to mommy";
+                returnText.text = "Go home to give items to mommy";
+
                 cartText.text = "Your cart is full";
                 if (returns == 3)
                 {
@@ -402,6 +384,22 @@ public class CartScript : MonoBehaviour
 
             sugar.text = "Sugarlevel: " + sugarlevel.ToString();
         }
+
+
+
+   /* public void BacktoVillage()
+    {
+        SceneManager.LoadScene("Village");
+    }
+
+    //Event is accessible when GameManager.Instance.secCheckStranger == true, need water for mom and something sweet for welldigger
+    public void C2EndEvent()
+    {
+        GameManager.Instance.gotWater = true;
+        GameManager.Instance.goalDone = true;
+        SceneManager.LoadScene("Well");
+    }*/
+
 
         else if (GameManager.Instance.mTimes != 1 && GameManager.Instance.marketEventCompleted == true)
         {
