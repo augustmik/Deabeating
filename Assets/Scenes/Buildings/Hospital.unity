@@ -140,6 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nurseWords: {fileID: 2147188680}
   dialogWaitTime: 1
+  nurse: {fileID: 53946062}
 --- !u!61 &53946066
 BoxCollider2D:
   m_ObjectHideFlags: 0
