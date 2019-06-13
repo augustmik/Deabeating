@@ -9,11 +9,13 @@ public class WellDigger : MonoBehaviour
     private float timer = 0.0f;
     public float dialogWaitTime;
     public GameObject nurse;
+    public GameObject villageArrow;
     private LinkedList<string> startDialog;
     private LinkedListNode<string> listNode;
     private void Awake()
     {
         nurse.SetActive(false);
+        villageArrow.SetActive(false);
     }
     void Start()
     {
@@ -67,9 +69,10 @@ public class WellDigger : MonoBehaviour
                     if (GameManager.Instance.firstCheckStranger == false)
                     {
                         GameManager.Instance.secCheckStranger = true;
+                        villageArrow.SetActive(true);
                     }
                     GameManager.Instance.firstCheckStranger = false; //update objective
-
+                    villageArrow.SetActive(true);
                 }
                 finally { timer -= dialogWaitTime; }
 
