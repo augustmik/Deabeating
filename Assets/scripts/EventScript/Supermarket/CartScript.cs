@@ -51,7 +51,13 @@ public class CartScript : MonoBehaviour
 
     private void Start()
     {
-        if (GameManager.Instance.secCheckStranger) { C2EndEvent(); } //Check hook, this works, now it just skips the event
+        if (GameManager.Instance.secCheckStranger)
+        {
+            GameManager.Instance.gotWater = true;
+            GameManager.Instance.goalDone = true;    //did it here for now
+            SceneManager.LoadScene("Well"); 
+            /*C2EndEvent();*/
+        } //Check hook, this works, now it just skips the event
         arrowPos = arrow.transform.position;
         quat = arrow.transform.rotation;
         sugarLevel.fillAmount = 0;
@@ -107,7 +113,7 @@ public class CartScript : MonoBehaviour
             GameManager.Instance.highRed = true;
            
         }
-
+        GameManager.Instance.goalDone = true;
         GameManager.Instance.marketEventCompleted = true;
         returnText.text = "YOU CAN GO HOME NOW";
     }
@@ -123,8 +129,9 @@ public class CartScript : MonoBehaviour
       
        //marketHandler();
         GameManager.Instance.gotWater = true;
-        SceneManager.LoadScene("Well");
-       
+            GameManager.Instance.goalDone = true;
+            SceneManager.LoadScene("Well");
+        //}
     }
 
     public void marketHandler()
@@ -324,6 +331,7 @@ public class CartScript : MonoBehaviour
             if (foods.Count == cartSize)
             {
                 returnText.text = "Go home to give items to mommy";
+
                 cartText.text = "Your cart is full";
                 if (returns == 3)
                 {
@@ -377,22 +385,7 @@ public class CartScript : MonoBehaviour
             sugar.text = "Sugarlevel: " + sugarlevel.ToString();
         }
 
-        else if (GameManager.Instance.marketEventCompleted == true && GameManager.Instance.secCheckStranger == false)
-        {
-            GameManager.Instance.highRed = true;
-            returnText.text = "YOU HAVE NO BUSINESS HERES";
-        }
 
-        else if (GameManager.Instance.secCheckStranger)
-        {
-            marketHandler();
-        }
-
-        
-        /*GameManager.Instance.goalDone = true;
-        GameManager.Instance.marketEventCompleted = true;
-        returnText.text = "YOU CAN GO HOME NOW";*/
-    }
 
    /* public void BacktoVillage()
     {
@@ -407,4 +400,15 @@ public class CartScript : MonoBehaviour
         SceneManager.LoadScene("Well");
     }*/
 
+
+        else if (GameManager.Instance.mTimes != 1 && GameManager.Instance.marketEventCompleted == true)
+        {
+            GameManager.Instance.highRed = true;
+            returnText.text = "YOU HAVE NO BUSINESS HERES";
+
+        }
+        /*GameManager.Instance.goalDone = true;
+        GameManager.Instance.marketEventCompleted = true;
+        returnText.text = "YOU CAN GO HOME NOW";*/
+    }
 }
