@@ -175,12 +175,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: eccb88ceb3362014f86618231bbe6396, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 81324832f568d1940bcd7328e0ddedf1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.89, y: 4.35}
+  m_Size: {x: 12.8, y: 7.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -215,6 +215,7 @@ MonoBehaviour:
   diggerWords: {fileID: 1989162394}
   dialogWaitTime: 1
   nurse: {fileID: 1485619134}
+  villageArrow: {fileID: 283344809}
 --- !u!1 &283344809
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,7 +733,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c1045010f724ea429428b8590a4bbe3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 41f9710e76e6b064ead2769f0bdeb292, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
