@@ -12,7 +12,8 @@
 	{"goalText":"Go to the Supermarket.", "isComplete":false, "tracker":-1},
 	{"goalText":"Return to Mom.", "isComplete":false},
 	{"goalText":"Go to School.", "isComplete":false},
-	
+	{"goalText":"Return Home.", "isComplete":false},
+
 	{"goalText":"Go back to the Supermarket.", "isComplete":false},
 	{"goalText":"Return to Mom.", "isComplete":false},
 
