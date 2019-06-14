@@ -554,7 +554,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3839f819489abfd44967918372a77e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 417190442}
+  audioSource: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!4 &417190444
 Transform:
   m_ObjectHideFlags: 0
@@ -1651,6 +1652,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: 
+  goalNumber: -1
+  C1SpecGoal: 0
+  C1SpecGoal2: 0
+  skipped: 0
+  goalCounter: 0
+  goalDone: 1
   mTimes: 0
   hTimes: 0
   sTimes: 0
@@ -1745,7 +1752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1757,7 +1764,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.05
+  m_FillAmount: 0.058
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -1819,7 +1826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.078431375}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

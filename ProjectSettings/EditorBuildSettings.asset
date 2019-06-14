@@ -23,10 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Buildings/Well.unity
     guid: 5d751a75f287cb740b7a94821574bf8b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Buildings/Well.unity
     guid: 5d751a75f287cb740b7a94821574bf8b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Buildings/Well.unity
     guid: 5d751a75f287cb740b7a94821574bf8b
   - enabled: 1
@@ -53,40 +53,40 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Buildings/School.unity
     guid: 2cdaa8b50aebc9b4e96fabfe16e469d1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tutorial/Home_tutorial.unity
     guid: e86fa7b55caade049aa743d343cec94c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tutorial/Hospital_tutorial.unity
     guid: d7a34db6952b06d43be449c8ad3e248a
   - enabled: 1
     path: Assets/Scenes/Buildings/Well.unity
     guid: 5d751a75f287cb740b7a94821574bf8b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Buildings/Well.unity
     guid: 5d751a75f287cb740b7a94821574bf8b
   - enabled: 1
     path: Assets/Scenes/Chapter1.unity
     guid: f2ebdf10783e6f84290036178d5a9abc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Buildings/Quiz/School_Quiz.unity
     guid: 481e11f655e563a429a4e3a6890e0c8f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Buildings/Quiz/Question1.unity
     guid: e3d2c243114eb32408b61e49f3b53675
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Buildings/Quiz/Question2.unity
     guid: 56f3c16bb7b6779498ae4a824c652781
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Buildings/Quiz/Question3.unity
     guid: 751758fdf19df58409fb13556a836baf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Buildings/School.unity
     guid: 2cdaa8b50aebc9b4e96fabfe16e469d1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Buildings/Quiz/Question4.unity
     guid: b9dd0c39b8de6c24f81e8bc7ce139e03
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Buildings/Quiz/Question5.unity
     guid: 721a411f43d7e12488b74847a3380863
   - enabled: 1
@@ -113,19 +113,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapter2.unity
     guid: fc79421dc45680744bdc006a35876661
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Buildings/Chapter3/HomeC3.unity
     guid: ab572a6b945affb4ca6c9cc3d0efd4dd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter3.unity
     guid: 779e524194b69a0448839b76afa410d5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Buildings/Chapter2/HomeC2.unity
     guid: e5261d6c5a7024d48b338ac6f8227059
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Buildings/Chapter2/RoomC2.unity
     guid: e16b906e2e57242458c44e7317179241
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Buildings/Chapter3/RoomC3.unity
     guid: 95cdb98188b9ff1428912613351fa304
   - enabled: 1

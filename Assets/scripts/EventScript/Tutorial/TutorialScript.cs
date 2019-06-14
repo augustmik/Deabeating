@@ -30,8 +30,15 @@ public class TutorialScript : MonoBehaviour
     public GameObject Nurse;
     public GameObject Mother;
 
+    public GameObject bubbleNurse;
+    public GameObject bubbleMother;
+
     public Text TutorialText;
-    public Text Message;
+    public Text MessageNurse;
+    public Text MessageMother;
+
+    
+
     public Sprite view2;
     public Sprite view3;
 
@@ -54,6 +61,8 @@ public class TutorialScript : MonoBehaviour
     private bool done = false;
     private void Start()
     {
+
+        bubbleMother.SetActive(false);
         messages = new List<string>();
         villageArrow.SetActive(false);
         panelorgPos = panel.transform.position;
@@ -80,7 +89,9 @@ public class TutorialScript : MonoBehaviour
         messages.Add(msg8);
         messages.Add(msg9);
         messages.Add(msg10);
-       
+
+        MessageMother.fontSize = 27;
+        MessageNurse.fontSize = 27;
     }
 
     private void Update()
@@ -88,12 +99,14 @@ public class TutorialScript : MonoBehaviour
         
         if (SceneManager.GetActiveScene().name == "Home_tutorial")
         {
-            if(done == false)
+           
+            if (done == false)
             {
-                 Message.text = msg1;
-                 TutorialText.text = "Hello " + PlayerManager.playernamestr + "and welcome to Diabeating!\n In this game you are going to learn about Diabetes.\n" +
+                bubbleMother.SetActive(true);
+                 MessageMother.text = msg1;
+                 TutorialText.text = "Hello " + PlayerManager.playernamestr + " and welcome to Diabeating!\nIn this game you are going to learn about Diabetes.\n" +
                                 "In the top left you will see your current goal \nFrom the bottom right button, you will ge to the village \n" +
-                                "Dialogue boxes will display the name of the speaker\n so you always know who is talking.";
+                                "Dialogue boxes will display the name of the speaker\nso you always know who is talking.";
             }
            
         }
@@ -102,83 +115,101 @@ public class TutorialScript : MonoBehaviour
         {
          
            timer += Time.deltaTime;
-            if (timer > 1f)//0f && timer < 3f)
+            if (timer > 0f && timer < 3f)
             {
-                Message.text = msg2;
+                MessageNurse.text = msg2;
             }
 
-            if (timer > 1f)//3f && timer < 7f)
+            if (timer > 3f && timer < 7f)
             {
                 Nurse.transform.localScale = new Vector3(111, 111, 0);
                 Nurse.transform.SetPositionAndRotation(view2Pos, rot);
                 Destroy(Mother);
                 renderer.sprite = view2;
 
-                Message.text = msg3;
+                MessageNurse.text = msg3;
             }
 
-            if (timer > 1f)//7f)
+            if (timer > 7f)
             {
-                Nurse.transform.SetPositionAndRotation(new Vector3(0, 1000, 0), rot);
+                Nurse.transform.SetPositionAndRotation(new Vector3(0, -400, 0), rot);
                 renderer.sprite = view3;
 
                 rectP.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightP);
                 rectT.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightT);
-                Message.text = msg4;
+                MessageNurse.text = msg4;
             }
 
 
-            if (timer > 1f)//10f)
+            if (timer >10f)
             {
                 renderer.sprite = view2;
                 Nurse.transform.SetPositionAndRotation(view2Pos, rot);
-                Message.text = msg5;
+                MessageNurse.text = msg5;
             }
 
-            if (timer > 1f)//15f)
+            if (timer > 15f)
             {
+
+                bubbleMother.SetActive(true);
+                bubbleNurse.SetActive(false);
+
                 rectP.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightP-80f);
                 rectT.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightT-80f);
                 rectP.SetPositionAndRotation(new Vector3(1000,500,0),rot);
                 rectT.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
-                Message.text = msg6;
+                MessageMother.text = msg6;
             }
 
-            if (timer > 1f)//20f)
+            if (timer > 20f)
             {
+                bubbleMother.SetActive(false);
+                bubbleNurse.SetActive(true);
+
                 rectP.SetPositionAndRotation(panelorgPos, rot);
                 rectT.SetPositionAndRotation(panelorgPos, rot);
-                Message.text = msg7;
+                MessageNurse.text = msg7;
             }
 
-            if (timer > 1f)//25f)
+            if (timer > 25f)
             {
+                bubbleMother.SetActive(true);
+                bubbleNurse.SetActive(false);
+
                 rectP.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
                 rectT.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
-                Message.text = msg8;
+                MessageMother.text = msg8;
             }
 
-            if (timer > 1f)//30f)
+            if (timer > 30f)
             {
+                bubbleMother.SetActive(false);
+                bubbleNurse.SetActive(true);
+
                 rectP.SetPositionAndRotation(panelorgPos, rot);
                 rectT.SetPositionAndRotation(panelorgPos, rot);
-                Message.text = msg9;
+                MessageNurse.text = msg9;
             }
 
-            if (timer > 1f)//35f)
+            if (timer > 35f)
             {
+                bubbleMother.SetActive(true);
+                bubbleNurse.SetActive(false);
+
                 rectP.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
                 rectT.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
-                Message.text = msg10;
+                MessageMother.text = msg10;
             }
 
-            if (timer > 1f)//40f)
+            if (timer > 40f)
             {
+                bubbleMother.SetActive(false);
+                bubbleNurse.SetActive(true);
                 rectP.SetPositionAndRotation(panelorgPos, rot);
                 rectT.SetPositionAndRotation(panelorgPos, rot);
                 back.SetActive(true);
                 GoalBG.transform.SetPositionAndRotation(new Vector3(920, 600, 0), rot);
-                Message.text = "    Nurse: \n You're welcome! ";
+                MessageNurse.text = "    Nurse: \n You're welcome! ";
                 GameManager.Instance.tutorialFinished = true;
                 GameManager.Instance.goalDone = true;
             }
@@ -195,7 +226,7 @@ public class TutorialScript : MonoBehaviour
         TutorialText.text = "Now you need to go to the hospital with your mother!\n" +
                             "Go to the village by clicken the houses on the right";
 
-        Message.text = "Mother: \n Lets go to the hospital " + PlayerManager.playernamestr;
+        MessageMother.text = "Mother: \n Lets go to the hospital " + PlayerManager.playernamestr;
 
     }
 
