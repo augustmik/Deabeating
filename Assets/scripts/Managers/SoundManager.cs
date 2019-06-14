@@ -5,7 +5,10 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
 
-    public AudioSource musicSource; 
+    public AudioSource audioSource;
+    //public AudioSource buttonSound;
+    public AudioClip buttonSound;
+    
     public static SoundManager instance = null;
 
     void Awake()
@@ -26,7 +29,14 @@ public class SoundManager : MonoBehaviour
 
     public void ChangeVolume(float value)
     {
-        musicSource.volume = value;
+        audioSource.volume = value;
+    }
+
+    public void PlayButtonSound()
+    {
+
+        audioSource.PlayOneShot(buttonSound);
+        
     }
 
 
