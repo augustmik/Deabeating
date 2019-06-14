@@ -11,6 +11,7 @@ public class TutorialScript : MonoBehaviour
     public GameObject text;
     public GameObject TutorialPanel;
     public GameObject back;
+    public GameObject villageArrow;
 
     private string msg1 = " \n  Hello, \n \n  Don't forget your screening in the hospital today! \n \n  -Nurse";
 
@@ -54,6 +55,7 @@ public class TutorialScript : MonoBehaviour
     private void Start()
     {
         messages = new List<string>();
+        villageArrow.SetActive(false);
         panelorgPos = panel.transform.position;
         back.SetActive(false);
         GoalBG.transform.SetPositionAndRotation(new Vector3(0, 1000, 0), rot);
@@ -189,6 +191,7 @@ public class TutorialScript : MonoBehaviour
         done = true;
         TutorialText.fontSize = 30;
         GameManager.Instance.goalDone = true;
+        villageArrow.SetActive(true);
         TutorialText.text = "Now you need to go to the hospital with your mother!\n" +
                             "Go to the village by clicken the houses on the right";
 
