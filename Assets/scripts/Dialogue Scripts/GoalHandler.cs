@@ -10,7 +10,7 @@ public class GoalHandler : MonoBehaviour
     public static GoalRoot allGoals;
     public Text goalText;
     private int adjustBy = 3;
-    private int specGoal = 10;
+    private int specGoal = 11;
 
     void Start()
     {

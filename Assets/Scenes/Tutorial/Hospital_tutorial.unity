@@ -745,10 +745,13 @@ MonoBehaviour:
   BG: {fileID: 150678823}
   panel: {fileID: 996360511}
   text: {fileID: 473220158}
+  TutorialPanel: {fileID: 0}
   back: {fileID: 661982399}
+  villageArrow: {fileID: 661982399}
   GoalBG: {fileID: 132417320}
   Nurse: {fileID: 1624416071}
   Mother: {fileID: 1731334212}
+  TutorialText: {fileID: 0}
   Message: {fileID: 473220160}
   view2: {fileID: 21300000, guid: dd35e4b5c180e69479d3a88f7363c37e, type: 3}
   view3: {fileID: 21300000, guid: 0b9824836ccb6e949a828a0896b920b6, type: 3}
@@ -1115,18 +1118,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2751fad103d3de4b9ca05c8ad89a31f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: 
+  goalNumber: -1
+  C1SpecGoal: 0
+  C1SpecGoal2: 0
+  skipped: 0
+  goalCounter: 0
+  goalDone: 1
   mTimes: 0
   hTimes: 0
   sTimes: 0
-  marketEventCompleted: 0
-  motherHelped: 0
+  Score: 0
   leftHome: 0
   backHome: 0
   tutorialFinished: 0
-  test: 0
-  helpMother: 0
-  rushToSchool: 0
-  helpStranger: 0
+  marketEventCompleted: 0
+  schoolComplete: 0
+  chapterScreenPlayed: 0
+  motherHelped: 0
+  choiceHelpMomFirst: -1
+  showC1CPanel: 0
+  chapter1Complete: 0
+  chapter2Complete: 0
+  chapter3Complete: 0
   lowRed: 0
   lowYellow: 0
   lowOrange: 0
@@ -1134,6 +1148,11 @@ MonoBehaviour:
   highRed: 0
   highOrange: 0
   highYellow: 0
+  helpStranger: 0
+  firstCheckStranger: 1
+  secCheckStranger: 0
+  seenNurse: 0
+  gotWater: 0
 --- !u!4 &1008101671
 Transform:
   m_ObjectHideFlags: 0
