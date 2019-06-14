@@ -23,8 +23,7 @@ public class MarketTutorial : MonoBehaviour
             next.gameObject.SetActive(true);
             OK.gameObject.SetActive(false);
 
-        }
-       
+        }       
     }
 
    public void hideTutorial()

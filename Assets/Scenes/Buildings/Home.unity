@@ -882,7 +882,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dc7d3708753d15c4bb5d9c3c33051e4a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dd9614228cc13d84bba5597d37267024, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -922,11 +922,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2751fad103d3de4b9ca05c8ad89a31f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: 
+  goalNumber: -1
+  C1SpecGoal: 0
+  C1SpecGoal2: 0
+  skipped: 0
+  goalCounter: 0
+  goalDone: 1
   mTimes: 0
   hTimes: 0
   sTimes: 0
+  Score: 0
+  leftHome: 0
+  backHome: 0
+  tutorialFinished: 0
   marketEventCompleted: 0
-  schoolComplele: 0
+  schoolComplete: 0
   chapterScreenPlayed: 0
   motherHelped: 0
   choiceHelpMomFirst: 0
@@ -934,11 +945,6 @@ MonoBehaviour:
   chapter1Complete: 0
   chapter2Complete: 0
   chapter3Complete: 0
-  leftHome: 0
-  backHome: 0
-  tutorialFinished: 0
-  test: 0
-  helpStranger: 0
   lowRed: 0
   lowYellow: 0
   lowOrange: 0
@@ -946,6 +952,11 @@ MonoBehaviour:
   highRed: 0
   highOrange: 0
   highYellow: 0
+  helpStranger: 0
+  firstCheckStranger: 1
+  secCheckStranger: 0
+  seenNurse: 0
+  gotWater: 0
 --- !u!4 &1008101671
 Transform:
   m_ObjectHideFlags: 0
@@ -1047,11 +1058,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -3471926617046923872, guid: d8ee677e1a3340642b2d3a1fd1304504,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2152039301920048743, guid: d8ee677e1a3340642b2d3a1fd1304504,
         type: 3}
       propertyPath: m_Sprite
@@ -1066,6 +1072,11 @@ PrefabInstance:
     - target: {fileID: 2152039301920048743, guid: d8ee677e1a3340642b2d3a1fd1304504,
         type: 3}
       propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3471926617046923872, guid: d8ee677e1a3340642b2d3a1fd1304504,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -1401,7 +1412,7 @@ RectTransform:
   - {fileID: 496950741}
   - {fileID: 1690796579}
   m_Father: {fileID: 1800441876}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

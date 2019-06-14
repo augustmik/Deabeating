@@ -1075,7 +1075,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &784447712
@@ -1387,6 +1387,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: 
   goalNumber: -1
+  C1SpecGoal: 0
+  C1SpecGoal2: 0
   skipped: 0
   goalCounter: 0
   goalDone: 1

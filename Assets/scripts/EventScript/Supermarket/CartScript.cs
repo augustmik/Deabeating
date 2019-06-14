@@ -311,6 +311,7 @@ public class CartScript : MonoBehaviour
 
 
             switch (returns)
+
             {
                 case 1:
                     returnText.text = "You have used one out of three returns";
@@ -331,7 +332,6 @@ public class CartScript : MonoBehaviour
             if (foods.Count == cartSize)
             {
                 returnText.text = "Go home to give items to mommy";
-
                 cartText.text = "Your cart is full";
                 if (returns == 3)
                 {
