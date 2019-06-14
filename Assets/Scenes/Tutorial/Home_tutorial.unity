@@ -661,8 +661,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 150}
+  m_AnchoredPosition: {x: 18, y: 78}
+  m_SizeDelta: {x: 350, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &473220160
 MonoBehaviour:
@@ -697,7 +697,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: asd
 --- !u!222 &473220161
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -821,17 +821,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d5c5635f2e019e40a22ed3c954d216a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BG: {fileID: 2135501484}
+  BG: {fileID: 0}
   panel: {fileID: 996360511}
   text: {fileID: 473220158}
   TutorialPanel: {fileID: 176415867}
-  back: {fileID: 2135501484}
+  back: {fileID: 0}
   villageArrow: {fileID: 661982399}
-  GoalBG: {fileID: 2135501484}
-  Nurse: {fileID: 2135501484}
-  Mother: {fileID: 2135501484}
+  GoalBG: {fileID: 0}
+  Nurse: {fileID: 0}
+  Mother: {fileID: 0}
+  bubbleNurse: {fileID: 0}
+  bubbleMother: {fileID: 996360511}
   TutorialText: {fileID: 784447714}
-  Message: {fileID: 473220160}
+  MessageNurse: {fileID: 0}
+  MessageMother: {fileID: 473220160}
   view2: {fileID: 0}
   view3: {fileID: 0}
 --- !u!1 &661982399
@@ -953,7 +956,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &784447712
@@ -1143,7 +1146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3839f819489abfd44967918372a77e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 0}
+  audioSource: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!4 &880849544
 Transform:
   m_ObjectHideFlags: 0
@@ -1194,7 +1198,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -302, y: -233}
-  m_SizeDelta: {x: 500, y: 150}
+  m_SizeDelta: {x: 500, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &996360513
 MonoBehaviour:
@@ -1216,8 +1220,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: fec7fdf9b96f0384388d458f9db39a85, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1617,40 +1621,10 @@ RectTransform:
   - {fileID: 176415868}
   - {fileID: 300526508}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &2135501484
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2135501485}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2135501485
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2135501484}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 496.87952, y: 201.5294, z: -509.625}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

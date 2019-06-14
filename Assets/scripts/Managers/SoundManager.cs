@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
 
+   
     public AudioSource audioSource;
     //public AudioSource buttonSound;
     public AudioClip buttonSound;
+   
+    
     
     public static SoundManager instance = null;
 
@@ -26,11 +30,6 @@ public class SoundManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-
-    public void ChangeVolume(float value)
-    {
-        audioSource.volume = value;
-    }
 
     public void PlayButtonSound()
     {
