@@ -658,6 +658,7 @@ MonoBehaviour:
   bossHPBar: {fileID: 1987534885}
   losePanel: {fileID: 676811116}
   preFightPanel: {fileID: 1750494172}
+  interval: 50
 --- !u!212 &492460225
 SpriteRenderer:
   m_ObjectHideFlags: 0
