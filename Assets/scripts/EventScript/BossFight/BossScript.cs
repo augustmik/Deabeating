@@ -17,6 +17,7 @@ public class BossScript : MonoBehaviour
     public GameObject losePanel;
     public GameObject preFightPanel;
     private bool startCheck = false;
+    
 
     void Awake()
     {
@@ -42,9 +43,14 @@ public class BossScript : MonoBehaviour
             if (bossHPBar.fillAmount <= 0.0f)
             {
                 SceneManager.LoadScene("GameWin");
+                
+               
             }
         }
     }
+
+   
+
     public void ResetScene()
     {
         SceneManager.LoadScene("Boss");
