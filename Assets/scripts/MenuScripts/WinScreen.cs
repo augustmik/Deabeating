@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class WinScreen : MonoBehaviour
 {
+    private float interval = 3.0f;
     
     void Start()
     {
@@ -14,10 +15,19 @@ public class WinScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (interval>0)
+        {
+            interval -= Time.deltaTime;
+        } else
+        {
+            SceneManager.LoadScene("Credits");
+        }
+
     }
-    public void RestartGame()
-    {
-        SceneManager.LoadScene("Credits");
-    }
+
+    //right now we don't need this
+    //public void RestartGame()
+    //{
+    //    SceneManager.LoadScene("Credits");
+    //}
 }

@@ -105,7 +105,7 @@ public class TutorialScript : MonoBehaviour
                 bubbleMother.SetActive(true);
                  MessageMother.text = msg1;
                  TutorialText.text = "Hello " + PlayerManager.playernamestr + " and welcome to Diabeating!\nIn this game you are going to learn about Diabetes.\n" +
-                                "In the top left you will see your current goal \nFrom the bottom right button, you will ge to the village \n" +
+                                "In the top left you will see your current goal \nFrom the bottom right button, you will get to the village. \n" +
                                 "Dialogue boxes will display the name of the speaker\nso you always know who is talking.";
             }
            
@@ -224,9 +224,9 @@ public class TutorialScript : MonoBehaviour
         GameManager.Instance.goalDone = true;
         villageArrow.SetActive(true);
         TutorialText.text = "Now you need to go to the hospital with your mother!\n" +
-                            "Go to the village by clicken the houses on the right";
+                            "Go to the village by clicking the houses on the right";
 
-        MessageMother.text = "Mother: \n Lets go to the hospital " + PlayerManager.playernamestr;
+        MessageMother.text = "Mother: \n Let's go to the hospital! " + PlayerManager.playernamestr;
 
     }
 
