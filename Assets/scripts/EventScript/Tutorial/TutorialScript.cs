@@ -29,6 +29,9 @@ public class TutorialScript : MonoBehaviour
 
     public GameObject Nurse;
     public GameObject Mother;
+    public GameObject MotherHoldingPhone;
+    
+   
 
     public GameObject bubbleNurse;
     public GameObject bubbleMother;
@@ -57,11 +60,18 @@ public class TutorialScript : MonoBehaviour
     private float nurseposy;
     private SpriteRenderer renderer;
 
+    //For Mother - Annika
+    private Vector3 view1Pos;
+    private Quaternion dontknow;
+    private float motherposy;
+    private SpriteRenderer rend;
+
     private List<string> messages;
     private bool done = false;
+
     private void Start()
     {
-
+        MotherHoldingPhone.SetActive(false);
         bubbleMother.SetActive(false);
         messages = new List<string>();
         villageArrow.SetActive(false);
@@ -226,6 +236,10 @@ public class TutorialScript : MonoBehaviour
         TutorialText.text = "Now you need to go to the hospital with your mother!\n" +
                             "Go to the village by clicking the houses on the right";
 
+        //Mother changes to Mother that looks to the player and speaks to him
+        Mother.SetActive(false);
+        MotherHoldingPhone.SetActive(true);
+        
         MessageMother.text = "Mother: \n Let's go to the hospital! " + PlayerManager.playernamestr;
 
     }
