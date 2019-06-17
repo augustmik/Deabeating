@@ -26,6 +26,9 @@ public class PlayerManager : MonoBehaviour
     public Text playername;
     public Text thanks;
     public Image villageHealth;
+    public GameObject roomArrow;
+    public GameObject villageArrow;
+
     private float timer = 0.0f;
     private bool choiseCheck = false;
     public float waitAmount;
@@ -45,6 +48,8 @@ public class PlayerManager : MonoBehaviour
                 //add delay
                 if (GameManager.Instance.choiceHelpMomFirst == -1) {
                     startTimer = true;
+                    roomArrow.SetActive(false);
+                    villageArrow.SetActive(false);
                 }
                 //GameManager.Instance.showC1CPanel = true;
             }
@@ -144,22 +149,29 @@ public class PlayerManager : MonoBehaviour
     {
         if (GameManager.Instance.choiceHelpMomFirst == -1)
         {
-            timer += Time.deltaTime;
-            if (timer > waitAmount)
+            if (startTimer)
             {
-                ShowChoiseC1();
-                timer -= waitAmount;
+                timer += Time.deltaTime;
+                if (timer > waitAmount)
+                {
+                    ShowChoiseC1();
+                    timer -= waitAmount;
+                }
             }
         }
         if (choiseCheck)
-        {
+        {            
             if (GameManager.Instance.choiceHelpMomFirst == 0) //if helps mom first
             {
                 thanks.text = "Thank you. That’s really kind of you. Go get some Food.";
+                roomArrow.SetActive(true);
+                villageArrow.SetActive(true);
             }
             else if (GameManager.Instance.choiceHelpMomFirst == 1)
             {
                 thanks.text = "OK, I understand, but please get me food after school then.";
+                roomArrow.SetActive(true);
+                villageArrow.SetActive(true);
             }
         }
     }

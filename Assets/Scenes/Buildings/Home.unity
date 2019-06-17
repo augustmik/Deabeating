@@ -697,7 +697,9 @@ MonoBehaviour:
   playername: {fileID: 0}
   thanks: {fileID: 473220160}
   villageHealth: {fileID: 0}
-  waitAmount: 1
+  roomArrow: {fileID: 492460221}
+  villageArrow: {fileID: 661982399}
+  waitAmount: 3
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
