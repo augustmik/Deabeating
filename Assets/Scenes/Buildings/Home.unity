@@ -697,6 +697,7 @@ MonoBehaviour:
   playername: {fileID: 0}
   thanks: {fileID: 473220160}
   villageHealth: {fileID: 0}
+  waitAmount: 1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -940,7 +941,7 @@ MonoBehaviour:
   schoolComplete: 0
   chapterScreenPlayed: 0
   motherHelped: 0
-  choiceHelpMomFirst: 0
+  choiceHelpMomFirst: -1
   showC1CPanel: 0
   chapter1Complete: 0
   chapter2Complete: 0
