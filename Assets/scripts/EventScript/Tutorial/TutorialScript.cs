@@ -47,6 +47,7 @@ public class TutorialScript : MonoBehaviour
 
     public Sprite view2;
     public Sprite view3;
+    public Sprite view3_w_number;
     public Sprite view4;
 
     private float timer;
@@ -158,6 +159,13 @@ public class TutorialScript : MonoBehaviour
                 //rectP.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightP);
                 //rectT.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightT);
                 MessageNurse.text = msg4;
+            }
+
+            if (timer > 9f)
+            {
+             
+                renderer.sprite = view3_w_number;
+                
             }
 
 

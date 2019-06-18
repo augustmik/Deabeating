@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.05660379, g: 0.05633679, b: 0.05633679, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -311,17 +311,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 20
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 3
   m_Text: 
 --- !u!222 &154348599
 CanvasRenderer:
@@ -516,8 +516,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: {fileID: 227553324}
   playerImage: {fileID: 1198516455}
-  grill: {fileID: 21300000, guid: 32a3024d621420a4994f1a4a57c2ee57, type: 3}
-  boi: {fileID: 21300000, guid: 665f5701349668347bacc323f7358762, type: 3}
   charScript: {fileID: 0}
 --- !u!20 &519420031
 Camera:
@@ -606,7 +604,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3839f819489abfd44967918372a77e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 0}
+  audioSource: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!4 &575852209
 Transform:
   m_ObjectHideFlags: 0
@@ -958,10 +957,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 2
+    m_FontSize: 20
+    m_FontStyle: 3
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
