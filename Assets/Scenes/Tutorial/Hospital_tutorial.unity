@@ -767,6 +767,7 @@ MonoBehaviour:
   MessageMother: {fileID: 1011671781}
   view2: {fileID: 21300000, guid: dd35e4b5c180e69479d3a88f7363c37e, type: 3}
   view3: {fileID: 21300000, guid: 0b9824836ccb6e949a828a0896b920b6, type: 3}
+  view3_w_number: {fileID: 21300000, guid: 3dd02ca560618fa428776cc6163ab7ad, type: 3}
   view4: {fileID: 21300000, guid: 690bcdf62583dd64faf02b3253c85b52, type: 3}
 --- !u!114 &519420034
 MonoBehaviour:
