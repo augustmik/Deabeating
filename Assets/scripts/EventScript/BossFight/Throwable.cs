@@ -25,10 +25,10 @@ public class Throwable : MonoBehaviour
         switch (randomA)
         {
             case 0:
-                ThrowChips();
+                ThrowChips(); //Chips attack shoots in an arch, dodgeable up
                 break;
             case 1:
-                ThrowCola();
+                ThrowCola(); //Cola attack shoots downwards onto the player, dodgeable left
                 break;
             default:
                 Debug.Log("Switch broke");
