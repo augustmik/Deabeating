@@ -10,6 +10,8 @@ public class WellDigger : MonoBehaviour
     public float dialogWaitTime;
     public GameObject nurse;
     public GameObject villageArrow;
+    public GameObject WellBubble; // -Annika
+    public GameObject PlayerNurseBubble; //-Annika
     private LinkedList<string> startDialog;
     private LinkedListNode<string> listNode;
     private void Awake()
@@ -19,6 +21,7 @@ public class WellDigger : MonoBehaviour
     }
     void Start()
     {
+        PlayerNurseBubble.SetActive(false); //-Annika
         startDialog = new LinkedList<string>();
         if (GameManager.Instance.gotWater == true)
         {
