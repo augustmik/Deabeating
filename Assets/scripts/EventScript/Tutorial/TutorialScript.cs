@@ -154,9 +154,9 @@ public class TutorialScript : MonoBehaviour
                 NurseSitting.SetActive(false); // -Annika
                 //Nurse.transform.SetPositionAndRotation(new Vector3(0, -400, 0), rot);
                 renderer.sprite = view3;
-
-                rectP.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightP);
-                rectT.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightT);
+                bubbleNurse.SetActive(true); //-Annika
+                //rectP.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightP);
+                //rectT.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightT);
                 MessageNurse.text = msg4;
             }
 
@@ -177,10 +177,11 @@ public class TutorialScript : MonoBehaviour
                 bubbleMother.SetActive(true);
                 bubbleNurse.SetActive(false);
 
-                rectP.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightP-80f);
-                rectT.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightT-80f);
-                rectP.SetPositionAndRotation(new Vector3(1000,500,0),rot);
-                rectT.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
+
+                //rectP.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightP-80f);
+                //rectT.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightT-80f);
+                //rectP.SetPositionAndRotation(new Vector3(1000,500,0),rot);
+                //rectT.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
                 MessageMother.text = msg6;
             }
 
@@ -192,8 +193,14 @@ public class TutorialScript : MonoBehaviour
                 bubbleMother.SetActive(false);
                 bubbleNurse.SetActive(true);
 
-                rectP.SetPositionAndRotation(panelorgPos, rot);
-                rectT.SetPositionAndRotation(panelorgPos, rot);
+                //rectP.SetPositionAndRotation(panelorgPos, rot);
+                //rectT.SetPositionAndRotation(panelorgPos, rot);
+
+                //rectP.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightP - 80f);
+                //rectT.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightT - 80f);
+                //rectP.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
+                //rectT.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
+
                 MessageNurse.text = msg7;
             }
 
@@ -205,8 +212,8 @@ public class TutorialScript : MonoBehaviour
                 bubbleMother.SetActive(true);
                 bubbleNurse.SetActive(false);
 
-                rectP.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
-                rectT.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
+                //rectP.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
+                //rectT.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
                 MessageMother.text = msg8;
             }
 
@@ -218,8 +225,8 @@ public class TutorialScript : MonoBehaviour
                 bubbleMother.SetActive(false);
                 bubbleNurse.SetActive(true);
 
-                rectP.SetPositionAndRotation(panelorgPos, rot);
-                rectT.SetPositionAndRotation(panelorgPos, rot);
+                //rectP.SetPositionAndRotation(panelorgPos, rot);
+                //rectT.SetPositionAndRotation(panelorgPos, rot);
                 MessageNurse.text = msg9;
             }
 
@@ -231,8 +238,8 @@ public class TutorialScript : MonoBehaviour
                 bubbleMother.SetActive(true);
                 bubbleNurse.SetActive(false);
 
-                rectP.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
-                rectT.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
+                //rectP.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
+                //rectT.SetPositionAndRotation(new Vector3(1000, 500, 0), rot);
                 MessageMother.text = msg10;
             }
 
@@ -243,10 +250,13 @@ public class TutorialScript : MonoBehaviour
                 renderer.sprite = view2; //-Annika
                 bubbleMother.SetActive(false);
                 bubbleNurse.SetActive(true);
-                rectP.SetPositionAndRotation(panelorgPos, rot);
-                rectT.SetPositionAndRotation(panelorgPos, rot);
+
+                //rectP.SetPositionAndRotation(panelorgPos, rot);
+                //rectT.SetPositionAndRotation(panelorgPos, rot);
+
                 back.SetActive(true);
                 GoalBG.transform.SetPositionAndRotation(new Vector3(920, 600, 0), rot);
+                //GoalBG.transform.SetPositionAndRotation(new Vector3(0, 1000, 0), rot);//-Annika
                 MessageNurse.text = "    Nurse: \n You're welcome! ";
                 GameManager.Instance.tutorialFinished = true;
                 GameManager.Instance.goalDone = true;
