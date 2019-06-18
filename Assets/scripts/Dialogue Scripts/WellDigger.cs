@@ -19,7 +19,6 @@ public class WellDigger : MonoBehaviour
     }
     void Start()
     {
-        //diggerWords.text = "Welldigger: \n   Is there someone ?";
         startDialog = new LinkedList<string>();
         if (GameManager.Instance.gotWater == true)
         {
@@ -44,9 +43,7 @@ public class WellDigger : MonoBehaviour
             startDialog.AddLast("Welldigger: \n   Is someone there?");
             startDialog.AddLast("Player: \n Hi, I’m " + GameManager.Instance.playerName + ".Can I help you ?");
             startDialog.AddLast("Welldigger: \n I’m not sure. Sometimes suddenly I get this blurry vision, but I don’t know what to do.");
-            //second choice here
             startDialog.AddLast("Player: \n I think the nurse told me about this. I have to see her, maybe she will know what to do.");
-            //update goals
         }
 
         listNode = startDialog.First;

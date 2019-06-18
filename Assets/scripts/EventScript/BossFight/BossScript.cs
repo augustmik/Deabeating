@@ -28,7 +28,7 @@ public class BossScript : MonoBehaviour
     void Update()
     {
         
-        if (losePanel.activeSelf == false && startCheck == true) 
+        if (losePanel.activeSelf == false && startCheck == true) //tracks if the fight is lost and tutorial panel is closed(start is pressed)
         {
             timer += Time.deltaTime;
 
