@@ -12,6 +12,7 @@ public class TutorialScript : MonoBehaviour
     public GameObject TutorialPanel;
     public GameObject back;
     public GameObject villageArrow;
+    public GameObject button; // -Annika
 
     private string msg1 = " \n  Hello, \n \n  Don't forget your screening in the hospital today! \n \n  -Nurse";
 
@@ -28,6 +29,8 @@ public class TutorialScript : MonoBehaviour
     public GameObject GoalBG;
 
     public GameObject Nurse;
+    public GameObject NurseSitting;
+    public GameObject MotherSitting;
     public GameObject Mother;
     public GameObject MotherHoldingPhone;
     
@@ -44,6 +47,7 @@ public class TutorialScript : MonoBehaviour
 
     public Sprite view2;
     public Sprite view3;
+    public Sprite view4;
 
     private float timer;
   
@@ -123,7 +127,8 @@ public class TutorialScript : MonoBehaviour
 
        if (SceneManager.GetActiveScene().name == "Hospital_tutorial" && GameManager.Instance.leftHome == true)
         {
-         
+            NurseSitting.SetActive(false);
+            MotherSitting.SetActive(false);
            timer += Time.deltaTime;
             if (timer > 0f && timer < 3f)
             {
@@ -132,9 +137,13 @@ public class TutorialScript : MonoBehaviour
 
             if (timer > 3f && timer < 7f)
             {
-                Nurse.transform.localScale = new Vector3(111, 111, 0);
-                Nurse.transform.SetPositionAndRotation(view2Pos, rot);
+                NurseSitting.SetActive(true); // -Annika
+                //NurseSitting.transform.localScale = new Vector3(111, 111, 0);
+                //NurseSitting.transform.SetPositionAndRotation(view2Pos, rot);
                 Destroy(Mother);
+                //Nurse.SetActive(false);
+                
+                Nurse.SetActive(false); //-Annika
                 renderer.sprite = view2;
 
                 MessageNurse.text = msg3;
@@ -142,7 +151,8 @@ public class TutorialScript : MonoBehaviour
 
             if (timer > 7f)
             {
-                Nurse.transform.SetPositionAndRotation(new Vector3(0, -400, 0), rot);
+                NurseSitting.SetActive(false); // -Annika
+                //Nurse.transform.SetPositionAndRotation(new Vector3(0, -400, 0), rot);
                 renderer.sprite = view3;
 
                 rectP.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, heightP);
@@ -153,14 +163,17 @@ public class TutorialScript : MonoBehaviour
 
             if (timer >10f)
             {
+                NurseSitting.SetActive(true); // -Annika
                 renderer.sprite = view2;
-                Nurse.transform.SetPositionAndRotation(view2Pos, rot);
+                //Nurse.transform.SetPositionAndRotation(view2Pos, rot);
                 MessageNurse.text = msg5;
             }
 
             if (timer > 15f)
             {
-
+                NurseSitting.SetActive(false); // -Annika
+                MotherSitting.SetActive(true); //Annika
+                renderer.sprite = view4; // -Annika
                 bubbleMother.SetActive(true);
                 bubbleNurse.SetActive(false);
 
@@ -173,6 +186,9 @@ public class TutorialScript : MonoBehaviour
 
             if (timer > 20f)
             {
+                NurseSitting.SetActive(true); // -Annika
+                MotherSitting.SetActive(false); //Annika
+                renderer.sprite = view2; //-Annika
                 bubbleMother.SetActive(false);
                 bubbleNurse.SetActive(true);
 
@@ -183,6 +199,9 @@ public class TutorialScript : MonoBehaviour
 
             if (timer > 25f)
             {
+                MotherSitting.SetActive(true); //Annika
+                NurseSitting.SetActive(false); // -Annika
+                renderer.sprite = view4; //-Annika
                 bubbleMother.SetActive(true);
                 bubbleNurse.SetActive(false);
 
@@ -193,6 +212,9 @@ public class TutorialScript : MonoBehaviour
 
             if (timer > 30f)
             {
+                MotherSitting.SetActive(false); //Annika
+                NurseSitting.SetActive(true); // -Annika
+                renderer.sprite = view2;//-Annika
                 bubbleMother.SetActive(false);
                 bubbleNurse.SetActive(true);
 
@@ -203,6 +225,9 @@ public class TutorialScript : MonoBehaviour
 
             if (timer > 35f)
             {
+                MotherSitting.SetActive(true); //Annika
+                NurseSitting.SetActive(false); // -Annika
+                renderer.sprite = view4; //-Annika
                 bubbleMother.SetActive(true);
                 bubbleNurse.SetActive(false);
 
@@ -213,6 +238,9 @@ public class TutorialScript : MonoBehaviour
 
             if (timer > 40f)
             {
+                MotherSitting.SetActive(false); //Annika
+                NurseSitting.SetActive(true); // -Annika
+                renderer.sprite = view2; //-Annika
                 bubbleMother.SetActive(false);
                 bubbleNurse.SetActive(true);
                 rectP.SetPositionAndRotation(panelorgPos, rot);
@@ -229,6 +257,7 @@ public class TutorialScript : MonoBehaviour
 
     public void NextTutorial()
     {
+        Destroy(button); //-Annika
         done = true;
         TutorialText.fontSize = 30;
         GameManager.Instance.goalDone = true;
@@ -236,10 +265,11 @@ public class TutorialScript : MonoBehaviour
         TutorialText.text = "Now you need to go to the hospital with your mother!\n" +
                             "Go to the village by clicking the houses on the right";
 
-        //Mother changes to Mother that looks to the player and speaks to him
+        //Mother changes to Mother that looks to the player and speaks to him -Annika
         Mother.SetActive(false);
-        //MotherHoldingPhone.SetActive(true);
         
+        //MotherHoldingPhone.SetActive(true);
+
         MessageMother.text = "Mother: \n Let's go to the hospital! " + PlayerManager.playernamestr;
 
     }
