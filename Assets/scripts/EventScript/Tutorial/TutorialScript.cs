@@ -29,6 +29,7 @@ public class TutorialScript : MonoBehaviour
     public GameObject GoalBG;
 
     public GameObject Nurse;
+    public GameObject NurseSitting;
     public GameObject Mother;
     public GameObject MotherHoldingPhone;
     
@@ -124,7 +125,7 @@ public class TutorialScript : MonoBehaviour
 
        if (SceneManager.GetActiveScene().name == "Hospital_tutorial" && GameManager.Instance.leftHome == true)
         {
-         
+            NurseSitting.SetActive(false);
            timer += Time.deltaTime;
             if (timer > 0f && timer < 3f)
             {
@@ -133,9 +134,13 @@ public class TutorialScript : MonoBehaviour
 
             if (timer > 3f && timer < 7f)
             {
-                Nurse.transform.localScale = new Vector3(111, 111, 0);
-                Nurse.transform.SetPositionAndRotation(view2Pos, rot);
+                NurseSitting.SetActive(true);
+                //NurseSitting.transform.localScale = new Vector3(111, 111, 0);
+                //NurseSitting.transform.SetPositionAndRotation(view2Pos, rot);
                 Destroy(Mother);
+                //Nurse.SetActive(false);
+                
+                Nurse.SetActive(false);
                 renderer.sprite = view2;
 
                 MessageNurse.text = msg3;
