@@ -71,7 +71,7 @@ public class TutorialScript : MonoBehaviour
 
     private void Start()
     {
-        MotherHoldingPhone.SetActive(false);
+        //MotherHoldingPhone.SetActive(false);
         bubbleMother.SetActive(false);
         messages = new List<string>();
         villageArrow.SetActive(false);
@@ -238,7 +238,7 @@ public class TutorialScript : MonoBehaviour
 
         //Mother changes to Mother that looks to the player and speaks to him
         Mother.SetActive(false);
-        MotherHoldingPhone.SetActive(true);
+        //MotherHoldingPhone.SetActive(true);
         
         MessageMother.text = "Mother: \n Let's go to the hospital! " + PlayerManager.playernamestr;
 
