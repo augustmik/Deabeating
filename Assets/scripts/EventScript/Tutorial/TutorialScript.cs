@@ -12,6 +12,7 @@ public class TutorialScript : MonoBehaviour
     public GameObject TutorialPanel;
     public GameObject back;
     public GameObject villageArrow;
+    public GameObject button; // -Annika
 
     private string msg1 = " \n  Hello, \n \n  Don't forget your screening in the hospital today! \n \n  -Nurse";
 
@@ -229,6 +230,7 @@ public class TutorialScript : MonoBehaviour
 
     public void NextTutorial()
     {
+        Destroy(button); //-Annika
         done = true;
         TutorialText.fontSize = 30;
         GameManager.Instance.goalDone = true;
@@ -236,10 +238,11 @@ public class TutorialScript : MonoBehaviour
         TutorialText.text = "Now you need to go to the hospital with your mother!\n" +
                             "Go to the village by clicking the houses on the right";
 
-        //Mother changes to Mother that looks to the player and speaks to him
+        //Mother changes to Mother that looks to the player and speaks to him -Annika
         Mother.SetActive(false);
-        //MotherHoldingPhone.SetActive(true);
         
+        //MotherHoldingPhone.SetActive(true);
+
         MessageMother.text = "Mother: \n Let's go to the hospital! " + PlayerManager.playernamestr;
 
     }
