@@ -7,8 +7,11 @@ using UnityEngine.UI;
 public class Hospital : MonoBehaviour
 {
     public Text nurseWords;
-    private float timer = 0.0f;
+    public GameObject speechBubble;
+    private float timer;
     public float dialogWaitTime;
+    private int counter = 0;
+    private bool[] speechOrder = {true,false, true, false, false, true, false};
     public GameObject nurse;
     public GameObject villageArrow;
     private LinkedList<string> startDialog;
@@ -17,6 +20,7 @@ public class Hospital : MonoBehaviour
     void Start()
     {
         startDialog = new LinkedList<string>();
+        timer = dialogWaitTime;
         villageArrow.SetActive(false);
         if (GameManager.Instance.seenNurse != true)
         {
@@ -33,11 +37,12 @@ public class Hospital : MonoBehaviour
         {
             nurse.SetActive(false);
             villageArrow.SetActive(true);
+            counter = 0;
             startDialog.AddLast("Player: \n The Nurse must be with the Welldigger.");
         }
 
         listNode = startDialog.First;
-        nurseWords.text = listNode.Value;
+        //nurseWords.text = listNode.Value;
     }
 
     // Update is called once per frame
@@ -50,8 +55,11 @@ public class Hospital : MonoBehaviour
             {
                 try
                 {
+                    AdjustOrb();
                     nurseWords.text = listNode.Value;
                     listNode = listNode.Next;
+                    
+
                 }
                 catch (System.NullReferenceException) {
                     GameManager.Instance.seenNurse = true;
@@ -63,5 +71,23 @@ public class Hospital : MonoBehaviour
             }
         }
         if (timer > dialogWaitTime) { timer -= dialogWaitTime; }
+    }
+    void AdjustOrb()
+    {
+        try
+        {
+            if (speechOrder[counter])
+            {
+                speechBubble.transform.localScale = new Vector3(-0.49217f, -0.49217f, 0.49217f);
+                nurseWords.transform.localScale = new Vector3(-1, -1, 1);
+            }
+            else
+            {
+                speechBubble.transform.localScale = new Vector3(0.49217f, -0.49217f, 0.49217f);
+                nurseWords.transform.localScale = new Vector3(1, -1, 1);
+            }
+            counter++;
+        }
+        catch (System.IndexOutOfRangeException) { }
     }
 }
