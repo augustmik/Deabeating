@@ -29,6 +29,10 @@ public class PlayerManager : MonoBehaviour
     public GameObject roomArrow;
     public GameObject villageArrow;
 
+    private float endTimer = 0.0f;
+    private bool endCheck = false;
+    public float waitEndAmount;
+
     private float timer = 0.0f;
     private bool choiseCheck = false;
     public float waitAmount;
@@ -37,6 +41,8 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         Scene current = SceneManager.GetActiveScene();
+        endTimer = 0.0f;
+        endCheck = false;
         GameManager.Instance.playerName = playernamestr;
         //charScript = GameObject.Find("CharacterCreation");
         if (current.name.ToString() == "Home")
@@ -113,18 +119,14 @@ public class PlayerManager : MonoBehaviour
             //add delay
             if (GameManager.Instance.marketEventCompleted == true && GameManager.Instance.schoolComplete == true)
             {
-                GameManager.Instance.chapter1Complete = true;
-                GameManager.Instance.chapterScreenPlayed = false;
-                if (GameManager.Instance.gotWater)
-                {
-                    GameManager.Instance.chapter2Complete = true;
-                    SceneManager.LoadScene("Chapter3");
+                //timer for messages
+                if (GameManager.Instance.gotWater) { 
+                    thanks.text = "Thank you for bringing me water, I feel so much better now."; //response for water
                 }
-                else
-                {
-                    GameManager.Instance.goalNumber = 14;       //adjust for chapter 2, no help mom goals tho at start
-                    SceneManager.LoadScene("Chapter2");
-                }
+                endCheck = true;
+                roomArrow.SetActive(false);
+                villageArrow.SetActive(false);
+                //transfered to Update
 
             }
         }
@@ -147,6 +149,25 @@ public class PlayerManager : MonoBehaviour
     }
     private void Update()
     {
+        if (endCheck)
+        {
+            endTimer += Time.deltaTime;
+            if (endTimer > waitEndAmount)
+            {
+                GameManager.Instance.chapter1Complete = true;
+                GameManager.Instance.chapterScreenPlayed = false;
+                if (GameManager.Instance.gotWater)
+                {
+                    GameManager.Instance.chapter2Complete = true;
+                    SceneManager.LoadScene("Chapter3");
+                }
+                else
+                {
+                    GameManager.Instance.goalNumber = 14;       //adjust for chapter 2, no help mom goals tho at start
+                    SceneManager.LoadScene("Chapter2");
+                }
+            }
+        }
         if (GameManager.Instance.choiceHelpMomFirst == -1)
         {
             if (startTimer)

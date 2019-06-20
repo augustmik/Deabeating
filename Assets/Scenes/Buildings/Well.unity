@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diggerWords: {fileID: 1989162394}
-  dialogWaitTime: 1
+  dialogWaitTime: 3
   nurse: {fileID: 1485619134}
   villageArrow: {fileID: 283344809}
   WellBubble: {fileID: 379888162}
