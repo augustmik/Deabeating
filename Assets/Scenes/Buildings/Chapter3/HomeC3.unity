@@ -569,7 +569,7 @@ RectTransform:
   m_GameObject: {fileID: 1384124249}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 1609650226}
   m_Father: {fileID: 978016228}
@@ -577,7 +577,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 325, y: 50}
+  m_AnchoredPosition: {x: 357, y: 50}
   m_SizeDelta: {x: -750, y: -500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1384124251
@@ -600,8 +600,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: fec7fdf9b96f0384388d458f9db39a85, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -651,6 +651,9 @@ MonoBehaviour:
   playername: {fileID: 0}
   thanks: {fileID: 0}
   villageHealth: {fileID: 0}
+  roomArrow: {fileID: 0}
+  villageArrow: {fileID: 0}
+  waitAmount: 0
 --- !u!81 &1603564019
 AudioListener:
   m_ObjectHideFlags: 0
@@ -746,15 +749,15 @@ RectTransform:
   m_GameObject: {fileID: 1609650225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1384124250}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -33}
-  m_SizeDelta: {x: 500, y: 250}
+  m_AnchoredPosition: {x: 21, y: 27}
+  m_SizeDelta: {x: 404.27, y: 125.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1609650227
 MonoBehaviour:
@@ -789,7 +792,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'asd
+  m_Text: 'Player:
+
+    Mom must have left already.
+
+    I have to go to school now.
 
 '
 --- !u!222 &1609650228
