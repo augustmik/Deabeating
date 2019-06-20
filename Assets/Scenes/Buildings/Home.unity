@@ -667,7 +667,8 @@ MonoBehaviour:
   villageHealth: {fileID: 0}
   roomArrow: {fileID: 492460221}
   villageArrow: {fileID: 661982399}
-  waitAmount: 3
+  waitEndAmount: 4
+  waitAmount: 5
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0

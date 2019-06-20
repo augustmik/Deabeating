@@ -339,6 +339,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &304311116 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5771252823732149685, guid: 09be95c3dba61d244991738d6793f3db,
+    type: 3}
+  m_PrefabInstance: {fileID: 1784767948}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &326874209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,6 +1217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 988853074}
   - component: {fileID: 988853075}
+  - component: {fileID: 988853076}
   m_Layer: 0
   m_Name: chieff
   m_TagString: Untagged
@@ -1280,6 +1287,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &988853076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988853073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3034c9faf1c39aa40a7e4b5b144499a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPrefab: {fileID: 5771252823732149685, guid: 09be95c3dba61d244991738d6793f3db,
+    type: 3}
+  locationObj: {fileID: 304311116}
+  waitTime: 3
+  hpDecrease: 0.05
+  bossHPBar: {fileID: 1987534885}
+  losePanel: {fileID: 676811116}
+  preFightPanel: {fileID: 1750494172}
 --- !u!1 &1066709557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,7 +1542,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 988853076}
         m_MethodName: StartFight
         m_Mode: 1
         m_Arguments:
