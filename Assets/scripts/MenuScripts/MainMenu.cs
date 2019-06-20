@@ -36,4 +36,10 @@ public class MainMenu : MonoBehaviour
         GameManager.Instance.goalDone = true;
         SceneManager.LoadScene("RoomC3");
     }
+
+    public void BeginBoss()
+    {
+        GameManager.Instance.goalDone = true;
+        SceneManager.LoadScene("Boss");
+    }
 }

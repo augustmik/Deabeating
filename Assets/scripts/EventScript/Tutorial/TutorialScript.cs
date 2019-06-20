@@ -16,15 +16,15 @@ public class TutorialScript : MonoBehaviour
 
     private string msg1 = " \n  Hello, \n \n  Don't forget your screening in the hospital today! \n \n  -Nurse";
 
-    private string msg2 = "    Nurse: \n  Hey, you are right on time for the appointment! \n  Please sit down!";
-    private string msg3 = "    Nurse: \n   Next I will measure your blood sugar. \n  And don’t be afraid. \n It may sting a bit, but it won’t hurt.";
-    private string msg4 = "    Nurse: \n   Soon we will see a value. \n    If you haven’t eaten anything for 8 - 10 hours, \n  the normal value is 5,6. \n     So if your value is higher we know you might have diabetes.";
-    private string msg5 = "    Nurse: \n   So now we know that you have diabetes.";
-    private string msg6 = "    Mother: \n  How could I have discovered this myself?";
-    private string msg7 = "    Nurse: \n   A few symptoms could be that you have a blurry vision and that you are tired a lot";
-    private string msg8 = "    Mother: \n  So this means if my son gets for example blurry vision he has diabetes as well?";
-    private string msg9 = "    Nurse: \n   No, this is not always the case.\n  So when something like this happens, \n    always be sure to see a adoctor as soon as possible";
-    private string msg10 = "   Mother: \n  Thank you for your help! ";
+    private string msg2 = "    Nurse: \nHey, you are right on time for the appointment! \nPlease sit down!";
+    private string msg3 = "    Nurse: \nNext I will measure your blood sugar. \nAnd don’t be afraid. \nIt may sting a bit, but it won’t hurt.";
+    private string msg4 = "    Nurse: \nSoon we will see a value. \nIf you haven’t eaten anything for 8-10,\nhours the normal value is 5,6. \nSo if your value is higher we know you might have diabetes.";
+    private string msg5 = "    Nurse: \nSo now we know that you have diabetes.";
+    private string msg6 = "    Mother: \nHow could I have discovered this myself?";
+    private string msg7 = "    Nurse: \nA few symptoms could be that you have blurry vision or that you are tired.\nBut it is always important to get screened\nif you suspect you might have diabetes.";
+    private string msg8 = "    Mother: \nSo this means if my son gets for example blurry vision he has diabetes as well?";
+    private string msg9 = "    Nurse: \nNo, this is not always the case.\nSo when something like this happens, \nalways be sure to see a a doctor as soon as possible";
+    private string msg10 = "   Mother: \nThank you for your help! ";
 
     public GameObject GoalBG;
 
@@ -106,7 +106,7 @@ public class TutorialScript : MonoBehaviour
         messages.Add(msg10);
 
         MessageMother.fontSize = 27;
-        MessageNurse.fontSize = 27;
+        MessageNurse.fontSize = 23;
     }
 
     private void Update()
@@ -131,12 +131,12 @@ public class TutorialScript : MonoBehaviour
             NurseSitting.SetActive(false);
             MotherSitting.SetActive(false);
            timer += Time.deltaTime;
-            if (timer > 0f && timer < 3f)
+            if (timer > 0f && timer < 5f)
             {
                 MessageNurse.text = msg2;
             }
 
-            if (timer > 3f && timer < 7f)
+            if (timer > 5f && timer < 10f)
             {
                 NurseSitting.SetActive(true); // -Annika
                 //NurseSitting.transform.localScale = new Vector3(111, 111, 0);
@@ -150,7 +150,7 @@ public class TutorialScript : MonoBehaviour
                 MessageNurse.text = msg3;
             }
 
-            if (timer > 7f)
+            if (timer > 10f)
             {
                 NurseSitting.SetActive(false); // -Annika
                 //Nurse.transform.SetPositionAndRotation(new Vector3(0, -400, 0), rot);
@@ -161,7 +161,7 @@ public class TutorialScript : MonoBehaviour
                 MessageNurse.text = msg4;
             }
 
-            if (timer > 9f)
+            if (timer > 13f)
             {
              
                 renderer.sprite = view3_w_number;
@@ -169,7 +169,7 @@ public class TutorialScript : MonoBehaviour
             }
 
 
-            if (timer >10f)
+            if (timer >17f)
             {
                 NurseSitting.SetActive(true); // -Annika
                 renderer.sprite = view2;
@@ -177,7 +177,7 @@ public class TutorialScript : MonoBehaviour
                 MessageNurse.text = msg5;
             }
 
-            if (timer > 15f)
+            if (timer > 25f)
             {
                 NurseSitting.SetActive(false); // -Annika
                 MotherSitting.SetActive(true); //Annika
@@ -193,7 +193,7 @@ public class TutorialScript : MonoBehaviour
                 MessageMother.text = msg6;
             }
 
-            if (timer > 20f)
+            if (timer > 32f)
             {
                 NurseSitting.SetActive(true); // -Annika
                 MotherSitting.SetActive(false); //Annika
@@ -212,7 +212,7 @@ public class TutorialScript : MonoBehaviour
                 MessageNurse.text = msg7;
             }
 
-            if (timer > 25f)
+            if (timer > 41f)
             {
                 MotherSitting.SetActive(true); //Annika
                 NurseSitting.SetActive(false); // -Annika
@@ -225,7 +225,7 @@ public class TutorialScript : MonoBehaviour
                 MessageMother.text = msg8;
             }
 
-            if (timer > 30f)
+            if (timer > 48f)
             {
                 MotherSitting.SetActive(false); //Annika
                 NurseSitting.SetActive(true); // -Annika
@@ -238,7 +238,7 @@ public class TutorialScript : MonoBehaviour
                 MessageNurse.text = msg9;
             }
 
-            if (timer > 35f)
+            if (timer > 54f)
             {
                 MotherSitting.SetActive(true); //Annika
                 NurseSitting.SetActive(false); // -Annika
@@ -251,7 +251,7 @@ public class TutorialScript : MonoBehaviour
                 MessageMother.text = msg10;
             }
 
-            if (timer > 40f)
+            if (timer > 58f)
             {
                 MotherSitting.SetActive(false); //Annika
                 NurseSitting.SetActive(true); // -Annika
@@ -263,7 +263,7 @@ public class TutorialScript : MonoBehaviour
                 //rectT.SetPositionAndRotation(panelorgPos, rot);
 
                 back.SetActive(true);
-                GoalBG.transform.SetPositionAndRotation(new Vector3(920, 600, 0), rot);
+                GoalBG.transform.SetPositionAndRotation(new Vector3(800, 450, 0), rot);
                 //GoalBG.transform.SetPositionAndRotation(new Vector3(0, 1000, 0), rot);//-Annika
                 MessageNurse.text = "    Nurse: \n You're welcome! ";
                 GameManager.Instance.tutorialFinished = true;
@@ -285,10 +285,10 @@ public class TutorialScript : MonoBehaviour
 
         //Mother changes to Mother that looks to the player and speaks to him -Annika
         Mother.SetActive(false);
-        
-        //MotherHoldingPhone.SetActive(true);
 
-        MessageMother.text = "Mother: \n Let's go to the hospital! " + PlayerManager.playernamestr;
+        //MotherHoldingPhone.SetActive(true);
+        MessageMother.fontSize = 30;
+        MessageMother.text = "Mother: \n Let's go to the hospital " + PlayerManager.playernamestr +"!";
 
     }
 

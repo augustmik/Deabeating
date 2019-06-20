@@ -11,13 +11,9 @@ public class CartScript : MonoBehaviour
     private float sugarlevel = 0f;
     public int returns = 0;
 
-
-    
     public Image returnIcon1;
     public Image returnIcon2;
     public Image returnIcon3;
-
-    //public Image returnsI;
 
     public Image sugarLevel;
     public List<GameObject> foods = new List<GameObject>();
@@ -33,7 +29,6 @@ public class CartScript : MonoBehaviour
     Vector3 arrowPos;
     Quaternion quat;
 
-
     private bool onetime1 = false;
     private bool onetime2 = false;
     private bool onetime3 = false;
@@ -43,8 +38,6 @@ public class CartScript : MonoBehaviour
     private bool onetime7 = false;
     private bool onetime8 = false;
     private bool onetime9 = false;
-
-
 
     private bool removed = false;
 

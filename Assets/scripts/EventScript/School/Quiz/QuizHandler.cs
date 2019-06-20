@@ -71,6 +71,7 @@ public class QuizHandler : MonoBehaviour
         incorrectSign.SetActive(true);
         ScorePanel.SetActive(true);
         score.text = "Score: " + GameManager.Instance.Score.ToString();
+        GameManager.Instance.Score = 0;
         
         Invoke("GotoQuizMenu", 2f);
     }
@@ -82,9 +83,9 @@ public class QuizHandler : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
-    public void LoadBossLevel()
+    public void LoadChapter4()
     {
-        SceneManager.LoadScene("Boss");
+        SceneManager.LoadScene("Chapter4");
     }
 
     // Method loads MainMenu scene
