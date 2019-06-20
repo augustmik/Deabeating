@@ -263,7 +263,7 @@ public class TutorialScript : MonoBehaviour
                 //rectT.SetPositionAndRotation(panelorgPos, rot);
 
                 back.SetActive(true);
-                GoalBG.transform.SetPositionAndRotation(new Vector3(800, 450, 0), rot);
+                GoalBG.transform.SetPositionAndRotation(new Vector3(1000, 550, 0), rot);
                 //GoalBG.transform.SetPositionAndRotation(new Vector3(0, 1000, 0), rot);//-Annika
                 MessageNurse.text = "    Nurse: \n You're welcome! ";
                 GameManager.Instance.tutorialFinished = true;
