@@ -778,7 +778,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -600, y: -400}
+  m_SizeDelta: {x: -380, y: -400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &532659959
 MonoBehaviour:
@@ -944,6 +944,9 @@ MonoBehaviour:
   playername: {fileID: 0}
   thanks: {fileID: 0}
   villageHealth: {fileID: 0}
+  roomArrow: {fileID: 0}
+  villageArrow: {fileID: 0}
+  waitAmount: 0
 --- !u!1 &788970683
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,7 +983,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -600, y: -400}
+  m_SizeDelta: {x: -380, y: -400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &788970685
 MonoBehaviour:
@@ -2160,7 +2163,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -600, y: -400}
+  m_SizeDelta: {x: -380, y: -400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1421044731
 MonoBehaviour:
