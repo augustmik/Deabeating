@@ -1375,6 +1375,84 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391562584}
   m_CullTransparentMesh: 0
+--- !u!1 &1459215748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1459215750}
+  - component: {fileID: 1459215749}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1459215749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459215748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2751fad103d3de4b9ca05c8ad89a31f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: 
+  goalNumber: -1
+  C1SpecGoal: 0
+  C1SpecGoal2: 0
+  skipped: 0
+  goalCounter: 0
+  goalDone: 1
+  mTimes: 0
+  hTimes: 0
+  sTimes: 0
+  Score: 0
+  leftHome: 0
+  backHome: 0
+  tutorialFinished: 0
+  marketEventCompleted: 0
+  schoolComplete: 0
+  chapterScreenPlayed: 0
+  motherHelped: 0
+  choiceHelpMomFirst: -1
+  showC1CPanel: 0
+  chapter1Complete: 0
+  chapter2Complete: 0
+  chapter3Complete: 0
+  lowRed: 0
+  lowYellow: 0
+  lowOrange: 0
+  Green: 0
+  highRed: 0
+  highOrange: 0
+  highYellow: 0
+  helpStranger: 0
+  firstCheckStranger: 1
+  secCheckStranger: 0
+  seenNurse: 0
+  gotWater: 0
+--- !u!4 &1459215750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459215748}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -408.63724, y: 32.44014, z: -247.44482}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1748926298
 GameObject:
   m_ObjectHideFlags: 0
